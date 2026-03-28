@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  /* 科技暗色主题 */
+  --color-cyber-bg: #080B14;
+  --color-cyber-panel: #0D1220;
+  --color-cyber-card: #111827;
+  --color-cyber-border: rgba(0, 229, 255, 0.15);
+  --color-cyber-border-strong: rgba(0, 229, 255, 0.4);
+
+  --color-neon-cyan: #00E5FF;
+  --color-neon-purple: #A855F7;
+  --color-neon-pink: #F72585;
+  --color-neon-green: #00FF88;
+
+  --color-text-primary: #E2E8F0;
+  --color-text-muted: #64748B;
+  --color-text-dim: #374151;
+
+  --font-sans: "PingFang SC", "SF Pro Display", "Microsoft YaHei", system-ui, sans-serif;
+
+  --shadow-neon: 0 0 20px rgba(0, 229, 255, 0.3);
+  --shadow-neon-strong: 0 0 40px rgba(0, 229, 255, 0.5);
+  --shadow-panel: 0 4px 24px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background-color: #080B14;
+  font-family: var(--font-sans);
+  color: #E2E8F0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0D1220;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.6);
+}
+
+/* 荧光文字效果 */
+.neon-text {
+  color: #00E5FF;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.7);
+}
+
+/* 扫描线动画背景 */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* ── DestinyBanner 动画关键帧 ── */
+
+/* 圆圈呼吸脉冲 */
+@keyframes destiny-pulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(0,229,255,0.3); transform: scale(1); }
+  50% { box-shadow: 0 0 16px rgba(0,229,255,0.6), 0 0 32px rgba(0,229,255,0.2); transform: scale(1.08); }
+}
+
+/* SVG 虚线 idle 缓慢流动 */
+@keyframes destiny-dash-idle {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -36; }
+}
+
+/* SVG 虚线 half 有向流动 */
+@keyframes destiny-dash-flow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -40; }
+}
+
+/* SVG 实线 active 高速充能 */
+@keyframes destiny-dash-fast {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -40; }
+}
+
+/* 中间光点闪烁 */
+@keyframes destiny-spark {
+  0% { opacity: 0.4; r: 3px; }
+  100% { opacity: 1; r: 5px; }
+}
+
+/* 搜索中 loading 点 */
+@keyframes destiny-dot {
+  0% { opacity: 0.2; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 结果路径文字淡入 */
+@keyframes destiny-fade-in {
+  0% { opacity: 0; transform: translateX(-6px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* placeholder 输入框颜色 */
+input::placeholder {
+  color: rgba(100, 116, 139, 0.6);
+}

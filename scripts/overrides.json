@@ -1,0 +1,14 @@
+{
+  "_comment": "手动覆盖配置 — 由运营维护，优先级高于自动爬取数据",
+
+  "exclude": [
+    "示例：填写需要从图谱中排除的 celebrity_id，如已退圈明星"
+  ],
+
+  "node_patches": {
+    "示例_celebrity_id": {
+      "name": "修正后的名字",
+      "avatar": "/data/avatars/手动上传.jpg"
+    }
+  }
+}
