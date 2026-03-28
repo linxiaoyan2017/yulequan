@@ -1,26 +1,1342 @@
 [
   {
-    "source": "1337887",
-    "target": "1348107",
+    "source": "1274813",
+    "target": "1351383",
+    "weight": 3,
+    "dramas": [
+      "唐朝诡事录之西行",
+      "唐朝诡事录",
+      "唐朝诡事录之长安"
+    ]
+  },
+  {
+    "source": "1351383",
+    "target": "1388933",
+    "weight": 3,
+    "dramas": [
+      "唐朝诡事录之西行",
+      "唐朝诡事录",
+      "唐朝诡事录之长安"
+    ]
+  },
+  {
+    "source": "1274813",
+    "target": "1388933",
+    "weight": 3,
+    "dramas": [
+      "唐朝诡事录之西行",
+      "唐朝诡事录",
+      "唐朝诡事录之长安"
+    ]
+  },
+  {
+    "source": "1275934",
+    "target": "1313867",
+    "weight": 2,
+    "dramas": [
+      "警察荣誉",
+      "人之初"
+    ]
+  },
+  {
+    "source": "1275178",
+    "target": "1314821",
+    "weight": 2,
+    "dramas": [
+      "小巷人家",
+      "以法之名"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1313885",
+    "weight": 2,
+    "dramas": [
+      "风吹半夏",
+      "幸福到万家"
+    ]
+  },
+  {
+    "source": "1313581",
+    "target": "1351383",
+    "weight": 2,
+    "dramas": [
+      "唐朝诡事录",
+      "唐朝诡事录之长安"
+    ]
+  },
+  {
+    "source": "1274813",
+    "target": "1313581",
+    "weight": 2,
+    "dramas": [
+      "唐朝诡事录",
+      "唐朝诡事录之长安"
+    ]
+  },
+  {
+    "source": "1313581",
+    "target": "1388933",
+    "weight": 2,
+    "dramas": [
+      "唐朝诡事录",
+      "唐朝诡事录之长安"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1324619",
+    "weight": 2,
+    "dramas": [
+      "国色芳华",
+      "锦绣芳华"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1385466",
+    "weight": 2,
+    "dramas": [
+      "国色芳华",
+      "锦绣芳华"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1367835",
+    "weight": 2,
+    "dramas": [
+      "国色芳华",
+      "锦绣芳华"
+    ]
+  },
+  {
+    "source": "1324619",
+    "target": "1385466",
+    "weight": 2,
+    "dramas": [
+      "国色芳华",
+      "锦绣芳华"
+    ]
+  },
+  {
+    "source": "1324619",
+    "target": "1367835",
+    "weight": 2,
+    "dramas": [
+      "国色芳华",
+      "锦绣芳华"
+    ]
+  },
+  {
+    "source": "1367835",
+    "target": "1385466",
+    "weight": 2,
+    "dramas": [
+      "国色芳华",
+      "锦绣芳华"
+    ]
+  },
+  {
+    "source": "1276150",
+    "target": "1385770",
+    "weight": 2,
+    "dramas": [
+      "星汉灿烂·月升沧海",
+      "长歌行"
+    ]
+  },
+  {
+    "source": "1053438",
+    "target": "1385770",
+    "weight": 2,
+    "dramas": [
+      "星汉灿烂·月升沧海",
+      "偷偷藏不住"
+    ]
+  },
+  {
+    "source": "1313839",
+    "target": "1321055",
+    "weight": 2,
+    "dramas": [
+      "猎罪图鉴",
+      "猎罪图鉴2"
+    ]
+  },
+  {
+    "source": "1321055",
+    "target": "1386912",
+    "weight": 2,
+    "dramas": [
+      "猎罪图鉴",
+      "猎罪图鉴2"
+    ]
+  },
+  {
+    "source": "1321055",
+    "target": "1378687",
+    "weight": 2,
+    "dramas": [
+      "猎罪图鉴",
+      "猎罪图鉴2"
+    ]
+  },
+  {
+    "source": "1313839",
+    "target": "1386912",
+    "weight": 2,
+    "dramas": [
+      "猎罪图鉴",
+      "猎罪图鉴2"
+    ]
+  },
+  {
+    "source": "1313839",
+    "target": "1378687",
+    "weight": 2,
+    "dramas": [
+      "猎罪图鉴",
+      "猎罪图鉴2"
+    ]
+  },
+  {
+    "source": "1378687",
+    "target": "1386912",
+    "weight": 2,
+    "dramas": [
+      "猎罪图鉴",
+      "猎罪图鉴2"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1360615",
+    "weight": 2,
+    "dramas": [
+      "梦中的那片海",
+      "狼殿下"
+    ]
+  },
+  {
+    "source": "1274703",
+    "target": "1354442",
+    "weight": 2,
+    "dramas": [
+      "罚罪2",
+      "王牌部队"
+    ]
+  },
+  {
+    "source": "1042341",
+    "target": "1419004",
     "weight": 1,
     "dramas": [
-      "太平年"
+      "山花烂漫时"
+    ]
+  },
+  {
+    "source": "1042341",
+    "target": "1465003",
+    "weight": 1,
+    "dramas": [
+      "山花烂漫时"
+    ]
+  },
+  {
+    "source": "1042341",
+    "target": "1520330",
+    "weight": 1,
+    "dramas": [
+      "山花烂漫时"
+    ]
+  },
+  {
+    "source": "1419004",
+    "target": "1465003",
+    "weight": 1,
+    "dramas": [
+      "山花烂漫时"
+    ]
+  },
+  {
+    "source": "1419004",
+    "target": "1520330",
+    "weight": 1,
+    "dramas": [
+      "山花烂漫时"
+    ]
+  },
+  {
+    "source": "1465003",
+    "target": "1520330",
+    "weight": 1,
+    "dramas": [
+      "山花烂漫时"
+    ]
+  },
+  {
+    "source": "1316875",
+    "target": "1318152",
+    "weight": 1,
+    "dramas": [
+      "快乐再出发"
+    ]
+  },
+  {
+    "source": "1316875",
+    "target": "1322486",
+    "weight": 1,
+    "dramas": [
+      "快乐再出发"
+    ]
+  },
+  {
+    "source": "1316875",
+    "target": "1322495",
+    "weight": 1,
+    "dramas": [
+      "快乐再出发"
+    ]
+  },
+  {
+    "source": "1318152",
+    "target": "1322486",
+    "weight": 1,
+    "dramas": [
+      "快乐再出发"
+    ]
+  },
+  {
+    "source": "1318152",
+    "target": "1322495",
+    "weight": 1,
+    "dramas": [
+      "快乐再出发"
+    ]
+  },
+  {
+    "source": "1322486",
+    "target": "1322495",
+    "weight": 1,
+    "dramas": [
+      "快乐再出发"
+    ]
+  },
+  {
+    "source": "1051526",
+    "target": "1274463",
+    "weight": 1,
+    "dramas": [
+      "漫长的季节"
+    ]
+  },
+  {
+    "source": "1051526",
+    "target": "1362567",
+    "weight": 1,
+    "dramas": [
+      "漫长的季节"
+    ]
+  },
+  {
+    "source": "1051526",
+    "target": "1376310",
+    "weight": 1,
+    "dramas": [
+      "漫长的季节"
+    ]
+  },
+  {
+    "source": "1274463",
+    "target": "1362567",
+    "weight": 1,
+    "dramas": [
+      "漫长的季节"
+    ]
+  },
+  {
+    "source": "1274463",
+    "target": "1376310",
+    "weight": 1,
+    "dramas": [
+      "漫长的季节"
+    ]
+  },
+  {
+    "source": "1362567",
+    "target": "1376310",
+    "weight": 1,
+    "dramas": [
+      "漫长的季节"
+    ]
+  },
+  {
+    "source": "1274294",
+    "target": "1274437",
+    "weight": 1,
+    "dramas": [
+      "花儿与少年·丝路季"
+    ]
+  },
+  {
+    "source": "1274437",
+    "target": "1318720",
+    "weight": 1,
+    "dramas": [
+      "花儿与少年·丝路季"
+    ]
+  },
+  {
+    "source": "1274437",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "花儿与少年·丝路季"
+    ]
+  },
+  {
+    "source": "1274294",
+    "target": "1318720",
+    "weight": 1,
+    "dramas": [
+      "花儿与少年·丝路季"
+    ]
+  },
+  {
+    "source": "1274294",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "花儿与少年·丝路季"
+    ]
+  },
+  {
+    "source": "1318720",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "花儿与少年·丝路季"
+    ]
+  },
+  {
+    "source": "1313742",
+    "target": "1315101",
+    "weight": 1,
+    "dramas": [
+      "觉醒年代"
+    ]
+  },
+  {
+    "source": "1313742",
+    "target": "1355342",
+    "weight": 1,
+    "dramas": [
+      "觉醒年代"
+    ]
+  },
+  {
+    "source": "1313742",
+    "target": "1366417",
+    "weight": 1,
+    "dramas": [
+      "觉醒年代"
+    ]
+  },
+  {
+    "source": "1315101",
+    "target": "1355342",
+    "weight": 1,
+    "dramas": [
+      "觉醒年代"
+    ]
+  },
+  {
+    "source": "1315101",
+    "target": "1366417",
+    "weight": 1,
+    "dramas": [
+      "觉醒年代"
+    ]
+  },
+  {
+    "source": "1355342",
+    "target": "1366417",
+    "weight": 1,
+    "dramas": [
+      "觉醒年代"
+    ]
+  },
+  {
+    "source": "1275044",
+    "target": "1276105",
+    "weight": 1,
+    "dramas": [
+      "山海情"
+    ]
+  },
+  {
+    "source": "1274496",
+    "target": "1276105",
+    "weight": 1,
+    "dramas": [
+      "山海情"
+    ]
+  },
+  {
+    "source": "1275273",
+    "target": "1276105",
+    "weight": 1,
+    "dramas": [
+      "山海情"
+    ]
+  },
+  {
+    "source": "1274496",
+    "target": "1275044",
+    "weight": 1,
+    "dramas": [
+      "山海情"
+    ]
+  },
+  {
+    "source": "1275044",
+    "target": "1275273",
+    "weight": 1,
+    "dramas": [
+      "山海情"
+    ]
+  },
+  {
+    "source": "1274496",
+    "target": "1275273",
+    "weight": 1,
+    "dramas": [
+      "山海情"
+    ]
+  },
+  {
+    "source": "1007401",
+    "target": "1337887",
+    "weight": 1,
+    "dramas": [
+      "沉默的真相"
+    ]
+  },
+  {
+    "source": "1007401",
+    "target": "1312976",
+    "weight": 1,
+    "dramas": [
+      "沉默的真相"
+    ]
+  },
+  {
+    "source": "1007401",
+    "target": "1327193",
+    "weight": 1,
+    "dramas": [
+      "沉默的真相"
+    ]
+  },
+  {
+    "source": "1312976",
+    "target": "1337887",
+    "weight": 1,
+    "dramas": [
+      "沉默的真相"
+    ]
+  },
+  {
+    "source": "1327193",
+    "target": "1337887",
+    "weight": 1,
+    "dramas": [
+      "沉默的真相"
+    ]
+  },
+  {
+    "source": "1312976",
+    "target": "1327193",
+    "weight": 1,
+    "dramas": [
+      "沉默的真相"
+    ]
+  },
+  {
+    "source": "1011935",
+    "target": "1386044",
+    "weight": 1,
+    "dramas": [
+      "我的阿勒泰"
+    ]
+  },
+  {
+    "source": "1011935",
+    "target": "1417882",
+    "weight": 1,
+    "dramas": [
+      "我的阿勒泰"
+    ]
+  },
+  {
+    "source": "1011935",
+    "target": "1457676",
+    "weight": 1,
+    "dramas": [
+      "我的阿勒泰"
+    ]
+  },
+  {
+    "source": "1386044",
+    "target": "1417882",
+    "weight": 1,
+    "dramas": [
+      "我的阿勒泰"
+    ]
+  },
+  {
+    "source": "1386044",
+    "target": "1457676",
+    "weight": 1,
+    "dramas": [
+      "我的阿勒泰"
+    ]
+  },
+  {
+    "source": "1417882",
+    "target": "1457676",
+    "weight": 1,
+    "dramas": [
+      "我的阿勒泰"
+    ]
+  },
+  {
+    "source": "1313742",
+    "target": "1323723",
+    "weight": 1,
+    "dramas": [
+      "三体"
+    ]
+  },
+  {
+    "source": "1309215",
+    "target": "1323723",
+    "weight": 1,
+    "dramas": [
+      "三体"
+    ]
+  },
+  {
+    "source": "1275649",
+    "target": "1323723",
+    "weight": 1,
+    "dramas": [
+      "三体"
+    ]
+  },
+  {
+    "source": "1309215",
+    "target": "1313742",
+    "weight": 1,
+    "dramas": [
+      "三体"
+    ]
+  },
+  {
+    "source": "1275649",
+    "target": "1313742",
+    "weight": 1,
+    "dramas": [
+      "三体"
+    ]
+  },
+  {
+    "source": "1275649",
+    "target": "1309215",
+    "weight": 1,
+    "dramas": [
+      "三体"
+    ]
+  },
+  {
+    "source": "1049732",
+    "target": "1324619",
+    "weight": 1,
+    "dramas": [
+      "去有风的地方"
+    ]
+  },
+  {
+    "source": "1049732",
+    "target": "1341273",
+    "weight": 1,
+    "dramas": [
+      "去有风的地方"
+    ]
+  },
+  {
+    "source": "1049732",
+    "target": "1322716",
+    "weight": 1,
+    "dramas": [
+      "去有风的地方"
+    ]
+  },
+  {
+    "source": "1324619",
+    "target": "1341273",
+    "weight": 1,
+    "dramas": [
+      "去有风的地方"
+    ]
+  },
+  {
+    "source": "1322716",
+    "target": "1324619",
+    "weight": 1,
+    "dramas": [
+      "去有风的地方"
+    ]
+  },
+  {
+    "source": "1322716",
+    "target": "1341273",
+    "weight": 1,
+    "dramas": [
+      "去有风的地方"
+    ]
+  },
+  {
+    "source": "1274463",
+    "target": "1275934",
+    "weight": 1,
+    "dramas": [
+      "隐秘的角落"
+    ]
+  },
+  {
+    "source": "1274463",
+    "target": "1352321",
+    "weight": 1,
+    "dramas": [
+      "隐秘的角落"
+    ]
+  },
+  {
+    "source": "1274463",
+    "target": "1342395",
+    "weight": 1,
+    "dramas": [
+      "隐秘的角落"
+    ]
+  },
+  {
+    "source": "1275934",
+    "target": "1352321",
+    "weight": 1,
+    "dramas": [
+      "隐秘的角落"
+    ]
+  },
+  {
+    "source": "1275934",
+    "target": "1342395",
+    "weight": 1,
+    "dramas": [
+      "隐秘的角落"
+    ]
+  },
+  {
+    "source": "1342395",
+    "target": "1352321",
+    "weight": 1,
+    "dramas": [
+      "隐秘的角落"
+    ]
+  },
+  {
+    "source": "1011935",
+    "target": "1274477",
+    "weight": 1,
+    "dramas": [
+      "繁花"
     ]
   },
   {
     "source": "1274477",
-    "target": "1314124",
+    "target": "1274479",
     "weight": 1,
     "dramas": [
-      "生命树"
+      "繁花"
     ]
   },
   {
-    "source": "1345276",
-    "target": "1379733",
+    "source": "1274477",
+    "target": "1318720",
     "weight": 1,
     "dramas": [
-      "一人之下 第六季"
+      "繁花"
+    ]
+  },
+  {
+    "source": "1011935",
+    "target": "1274479",
+    "weight": 1,
+    "dramas": [
+      "繁花"
+    ]
+  },
+  {
+    "source": "1011935",
+    "target": "1318720",
+    "weight": 1,
+    "dramas": [
+      "繁花"
+    ]
+  },
+  {
+    "source": "1274479",
+    "target": "1318720",
+    "weight": 1,
+    "dramas": [
+      "繁花"
+    ]
+  },
+  {
+    "source": "1430949",
+    "target": "1462486",
+    "weight": 1,
+    "dramas": [
+      "中国奇谭"
+    ]
+  },
+  {
+    "source": "1340112",
+    "target": "1462486",
+    "weight": 1,
+    "dramas": [
+      "中国奇谭"
+    ]
+  },
+  {
+    "source": "1337822",
+    "target": "1462486",
+    "weight": 1,
+    "dramas": [
+      "中国奇谭"
+    ]
+  },
+  {
+    "source": "1340112",
+    "target": "1430949",
+    "weight": 1,
+    "dramas": [
+      "中国奇谭"
+    ]
+  },
+  {
+    "source": "1337822",
+    "target": "1430949",
+    "weight": 1,
+    "dramas": [
+      "中国奇谭"
+    ]
+  },
+  {
+    "source": "1337822",
+    "target": "1340112",
+    "weight": 1,
+    "dramas": [
+      "中国奇谭"
+    ]
+  },
+  {
+    "source": "1351383",
+    "target": "1364922",
+    "weight": 1,
+    "dramas": [
+      "唐朝诡事录之西行"
+    ]
+  },
+  {
+    "source": "1274813",
+    "target": "1364922",
+    "weight": 1,
+    "dramas": [
+      "唐朝诡事录之西行"
+    ]
+  },
+  {
+    "source": "1364922",
+    "target": "1388933",
+    "weight": 1,
+    "dramas": [
+      "唐朝诡事录之西行"
+    ]
+  },
+  {
+    "source": "1367835",
+    "target": "1403205",
+    "weight": 1,
+    "dramas": [
+      "古相思曲"
+    ]
+  },
+  {
+    "source": "1367835",
+    "target": "1419276",
+    "weight": 1,
+    "dramas": [
+      "古相思曲"
+    ]
+  },
+  {
+    "source": "1367835",
+    "target": "1466802",
+    "weight": 1,
+    "dramas": [
+      "古相思曲"
+    ]
+  },
+  {
+    "source": "1403205",
+    "target": "1419276",
+    "weight": 1,
+    "dramas": [
+      "古相思曲"
+    ]
+  },
+  {
+    "source": "1403205",
+    "target": "1466802",
+    "weight": 1,
+    "dramas": [
+      "古相思曲"
+    ]
+  },
+  {
+    "source": "1419276",
+    "target": "1466802",
+    "weight": 1,
+    "dramas": [
+      "古相思曲"
+    ]
+  },
+  {
+    "source": "1325810",
+    "target": "1329632",
+    "weight": 1,
+    "dramas": [
+      "棋魂"
+    ]
+  },
+  {
+    "source": "1329632",
+    "target": "1425767",
+    "weight": 1,
+    "dramas": [
+      "棋魂"
+    ]
+  },
+  {
+    "source": "1329632",
+    "target": "1373721",
+    "weight": 1,
+    "dramas": [
+      "棋魂"
+    ]
+  },
+  {
+    "source": "1325810",
+    "target": "1425767",
+    "weight": 1,
+    "dramas": [
+      "棋魂"
+    ]
+  },
+  {
+    "source": "1325810",
+    "target": "1373721",
+    "weight": 1,
+    "dramas": [
+      "棋魂"
+    ]
+  },
+  {
+    "source": "1373721",
+    "target": "1425767",
+    "weight": 1,
+    "dramas": [
+      "棋魂"
+    ]
+  },
+  {
+    "source": "1337794",
+    "target": "1362973",
+    "weight": 1,
+    "dramas": [
+      "无尽的尽头"
+    ]
+  },
+  {
+    "source": "1116446",
+    "target": "1362973",
+    "weight": 1,
+    "dramas": [
+      "无尽的尽头"
+    ]
+  },
+  {
+    "source": "1362973",
+    "target": "1397524",
+    "weight": 1,
+    "dramas": [
+      "无尽的尽头"
+    ]
+  },
+  {
+    "source": "1116446",
+    "target": "1337794",
+    "weight": 1,
+    "dramas": [
+      "无尽的尽头"
+    ]
+  },
+  {
+    "source": "1337794",
+    "target": "1397524",
+    "weight": 1,
+    "dramas": [
+      "无尽的尽头"
+    ]
+  },
+  {
+    "source": "1116446",
+    "target": "1397524",
+    "weight": 1,
+    "dramas": [
+      "无尽的尽头"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1314329",
+    "weight": 1,
+    "dramas": [
+      "狂飙"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1354284",
+    "weight": 1,
+    "dramas": [
+      "狂飙"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1313469",
+    "weight": 1,
+    "dramas": [
+      "狂飙"
+    ]
+  },
+  {
+    "source": "1314329",
+    "target": "1354284",
+    "weight": 1,
+    "dramas": [
+      "狂飙"
+    ]
+  },
+  {
+    "source": "1313469",
+    "target": "1314329",
+    "weight": 1,
+    "dramas": [
+      "狂飙"
+    ]
+  },
+  {
+    "source": "1313469",
+    "target": "1354284",
+    "weight": 1,
+    "dramas": [
+      "狂飙"
+    ]
+  },
+  {
+    "source": "1323398",
+    "target": "1356395",
+    "weight": 1,
+    "dramas": [
+      "莲花楼"
+    ]
+  },
+  {
+    "source": "1321057",
+    "target": "1323398",
+    "weight": 1,
+    "dramas": [
+      "莲花楼"
+    ]
+  },
+  {
+    "source": "1323398",
+    "target": "1342249",
+    "weight": 1,
+    "dramas": [
+      "莲花楼"
+    ]
+  },
+  {
+    "source": "1321057",
+    "target": "1356395",
+    "weight": 1,
+    "dramas": [
+      "莲花楼"
+    ]
+  },
+  {
+    "source": "1342249",
+    "target": "1356395",
+    "weight": 1,
+    "dramas": [
+      "莲花楼"
+    ]
+  },
+  {
+    "source": "1321057",
+    "target": "1342249",
+    "weight": 1,
+    "dramas": [
+      "莲花楼"
+    ]
+  },
+  {
+    "source": "1327193",
+    "target": "1405549",
+    "weight": 1,
+    "dramas": [
+      "繁城之下"
+    ]
+  },
+  {
+    "source": "1405549",
+    "target": "1419861",
+    "weight": 1,
+    "dramas": [
+      "繁城之下"
+    ]
+  },
+  {
+    "source": "1405549",
+    "target": "1411808",
+    "weight": 1,
+    "dramas": [
+      "繁城之下"
+    ]
+  },
+  {
+    "source": "1327193",
+    "target": "1419861",
+    "weight": 1,
+    "dramas": [
+      "繁城之下"
+    ]
+  },
+  {
+    "source": "1327193",
+    "target": "1411808",
+    "weight": 1,
+    "dramas": [
+      "繁城之下"
+    ]
+  },
+  {
+    "source": "1411808",
+    "target": "1419861",
+    "weight": 1,
+    "dramas": [
+      "繁城之下"
+    ]
+  },
+  {
+    "source": "1313867",
+    "target": "1374579",
+    "weight": 1,
+    "dramas": [
+      "警察荣誉"
+    ]
+  },
+  {
+    "source": "1313867",
+    "target": "1327193",
+    "weight": 1,
+    "dramas": [
+      "警察荣誉"
+    ]
+  },
+  {
+    "source": "1275934",
+    "target": "1374579",
+    "weight": 1,
+    "dramas": [
+      "警察荣誉"
+    ]
+  },
+  {
+    "source": "1327193",
+    "target": "1374579",
+    "weight": 1,
+    "dramas": [
+      "警察荣誉"
+    ]
+  },
+  {
+    "source": "1275934",
+    "target": "1327193",
+    "weight": 1,
+    "dramas": [
+      "警察荣誉"
+    ]
+  },
+  {
+    "source": "1359728",
+    "target": "1412762",
+    "weight": 1,
+    "dramas": [
+      "山河令"
+    ]
+  },
+  {
+    "source": "1359728",
+    "target": "1373645",
+    "weight": 1,
+    "dramas": [
+      "山河令"
+    ]
+  },
+  {
+    "source": "1359728",
+    "target": "1384585",
+    "weight": 1,
+    "dramas": [
+      "山河令"
+    ]
+  },
+  {
+    "source": "1373645",
+    "target": "1412762",
+    "weight": 1,
+    "dramas": [
+      "山河令"
+    ]
+  },
+  {
+    "source": "1384585",
+    "target": "1412762",
+    "weight": 1,
+    "dramas": [
+      "山河令"
+    ]
+  },
+  {
+    "source": "1373645",
+    "target": "1384585",
+    "weight": 1,
+    "dramas": [
+      "山河令"
+    ]
+  },
+  {
+    "source": "1274496",
+    "target": "1275178",
+    "weight": 1,
+    "dramas": [
+      "小巷人家"
+    ]
+  },
+  {
+    "source": "1274230",
+    "target": "1274496",
+    "weight": 1,
+    "dramas": [
+      "小巷人家"
+    ]
+  },
+  {
+    "source": "1274496",
+    "target": "1314821",
+    "weight": 1,
+    "dramas": [
+      "小巷人家"
+    ]
+  },
+  {
+    "source": "1274230",
+    "target": "1275178",
+    "weight": 1,
+    "dramas": [
+      "小巷人家"
+    ]
+  },
+  {
+    "source": "1274230",
+    "target": "1314821",
+    "weight": 1,
+    "dramas": [
+      "小巷人家"
+    ]
+  },
+  {
+    "source": "1021293",
+    "target": "1312940",
+    "weight": 1,
+    "dramas": [
+      "人世间"
+    ]
+  },
+  {
+    "source": "1042341",
+    "target": "1312940",
+    "weight": 1,
+    "dramas": [
+      "人世间"
+    ]
+  },
+  {
+    "source": "1275049",
+    "target": "1312940",
+    "weight": 1,
+    "dramas": [
+      "人世间"
+    ]
+  },
+  {
+    "source": "1021293",
+    "target": "1042341",
+    "weight": 1,
+    "dramas": [
+      "人世间"
+    ]
+  },
+  {
+    "source": "1021293",
+    "target": "1275049",
+    "weight": 1,
+    "dramas": [
+      "人世间"
+    ]
+  },
+  {
+    "source": "1042341",
+    "target": "1275049",
+    "weight": 1,
+    "dramas": [
+      "人世间"
     ]
   },
   {
@@ -32,43 +1348,1403 @@
     ]
   },
   {
+    "source": "1325623",
+    "target": "1397511",
+    "weight": 1,
+    "dramas": [
+      "海市蜃楼"
+    ]
+  },
+  {
+    "source": "1316033",
+    "target": "1397511",
+    "weight": 1,
+    "dramas": [
+      "海市蜃楼"
+    ]
+  },
+  {
+    "source": "1325623",
+    "target": "1392261",
+    "weight": 1,
+    "dramas": [
+      "海市蜃楼"
+    ]
+  },
+  {
+    "source": "1316033",
+    "target": "1392261",
+    "weight": 1,
+    "dramas": [
+      "海市蜃楼"
+    ]
+  },
+  {
+    "source": "1316033",
+    "target": "1325623",
+    "weight": 1,
+    "dramas": [
+      "海市蜃楼"
+    ]
+  },
+  {
+    "source": "1328103",
+    "target": "1348542",
+    "weight": 1,
+    "dramas": [
+      "装腔启示录"
+    ]
+  },
+  {
+    "source": "1274576",
+    "target": "1328103",
+    "weight": 1,
+    "dramas": [
+      "装腔启示录"
+    ]
+  },
+  {
+    "source": "1328103",
+    "target": "1456036",
+    "weight": 1,
+    "dramas": [
+      "装腔启示录"
+    ]
+  },
+  {
+    "source": "1274576",
+    "target": "1348542",
+    "weight": 1,
+    "dramas": [
+      "装腔启示录"
+    ]
+  },
+  {
+    "source": "1348542",
+    "target": "1456036",
+    "weight": 1,
+    "dramas": [
+      "装腔启示录"
+    ]
+  },
+  {
+    "source": "1274576",
+    "target": "1456036",
+    "weight": 1,
+    "dramas": [
+      "装腔启示录"
+    ]
+  },
+  {
+    "source": "1354078",
+    "target": "1383940",
+    "weight": 1,
+    "dramas": [
+      "苍兰诀"
+    ]
+  },
+  {
+    "source": "1313237",
+    "target": "1354078",
+    "weight": 1,
+    "dramas": [
+      "苍兰诀"
+    ]
+  },
+  {
+    "source": "1312690",
+    "target": "1354078",
+    "weight": 1,
+    "dramas": [
+      "苍兰诀"
+    ]
+  },
+  {
+    "source": "1313237",
+    "target": "1383940",
+    "weight": 1,
+    "dramas": [
+      "苍兰诀"
+    ]
+  },
+  {
+    "source": "1312690",
+    "target": "1383940",
+    "weight": 1,
+    "dramas": [
+      "苍兰诀"
+    ]
+  },
+  {
+    "source": "1312690",
+    "target": "1313237",
+    "weight": 1,
+    "dramas": [
+      "苍兰诀"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1337644",
+    "weight": 1,
+    "dramas": [
+      "风吹半夏"
+    ]
+  },
+  {
+    "source": "1275178",
+    "target": "1275620",
+    "weight": 1,
+    "dramas": [
+      "风吹半夏"
+    ]
+  },
+  {
+    "source": "1275178",
+    "target": "1337644",
+    "weight": 1,
+    "dramas": [
+      "风吹半夏"
+    ]
+  },
+  {
+    "source": "1313885",
+    "target": "1337644",
+    "weight": 1,
+    "dramas": [
+      "风吹半夏"
+    ]
+  },
+  {
+    "source": "1275178",
+    "target": "1313885",
+    "weight": 1,
+    "dramas": [
+      "风吹半夏"
+    ]
+  },
+  {
+    "source": "1312921",
+    "target": "1330356",
+    "weight": 1,
+    "dramas": [
+      "爱很美味"
+    ]
+  },
+  {
+    "source": "1330356",
+    "target": "1394696",
+    "weight": 1,
+    "dramas": [
+      "爱很美味"
+    ]
+  },
+  {
+    "source": "1330356",
+    "target": "1354373",
+    "weight": 1,
+    "dramas": [
+      "爱很美味"
+    ]
+  },
+  {
+    "source": "1312921",
+    "target": "1394696",
+    "weight": 1,
+    "dramas": [
+      "爱很美味"
+    ]
+  },
+  {
+    "source": "1312921",
+    "target": "1354373",
+    "weight": 1,
+    "dramas": [
+      "爱很美味"
+    ]
+  },
+  {
+    "source": "1354373",
+    "target": "1394696",
+    "weight": 1,
+    "dramas": [
+      "爱很美味"
+    ]
+  },
+  {
+    "source": "1348107",
+    "target": "1362973",
+    "weight": 1,
+    "dramas": [
+      "我在他乡挺好的"
+    ]
+  },
+  {
+    "source": "1348107",
+    "target": "1392035",
+    "weight": 1,
+    "dramas": [
+      "我在他乡挺好的"
+    ]
+  },
+  {
+    "source": "1348107",
+    "target": "1405549",
+    "weight": 1,
+    "dramas": [
+      "我在他乡挺好的"
+    ]
+  },
+  {
+    "source": "1362973",
+    "target": "1392035",
+    "weight": 1,
+    "dramas": [
+      "我在他乡挺好的"
+    ]
+  },
+  {
+    "source": "1362973",
+    "target": "1405549",
+    "weight": 1,
+    "dramas": [
+      "我在他乡挺好的"
+    ]
+  },
+  {
+    "source": "1392035",
+    "target": "1405549",
+    "weight": 1,
+    "dramas": [
+      "我在他乡挺好的"
+    ]
+  },
+  {
+    "source": "1046960",
+    "target": "1274494",
+    "weight": 1,
+    "dramas": [
+      "龙岭迷窟"
+    ]
+  },
+  {
+    "source": "1046960",
+    "target": "1274652",
+    "weight": 1,
+    "dramas": [
+      "龙岭迷窟"
+    ]
+  },
+  {
+    "source": "1046960",
+    "target": "1337794",
+    "weight": 1,
+    "dramas": [
+      "龙岭迷窟"
+    ]
+  },
+  {
+    "source": "1274494",
+    "target": "1274652",
+    "weight": 1,
+    "dramas": [
+      "龙岭迷窟"
+    ]
+  },
+  {
+    "source": "1274494",
+    "target": "1337794",
+    "weight": 1,
+    "dramas": [
+      "龙岭迷窟"
+    ]
+  },
+  {
+    "source": "1274652",
+    "target": "1337794",
+    "weight": 1,
+    "dramas": [
+      "龙岭迷窟"
+    ]
+  },
+  {
+    "source": "1356395",
+    "target": "1398884",
+    "weight": 1,
+    "dramas": [
+      "终极笔记"
+    ]
+  },
+  {
+    "source": "1356395",
+    "target": "1405772",
+    "weight": 1,
+    "dramas": [
+      "终极笔记"
+    ]
+  },
+  {
+    "source": "1356395",
+    "target": "1401585",
+    "weight": 1,
+    "dramas": [
+      "终极笔记"
+    ]
+  },
+  {
+    "source": "1398884",
+    "target": "1405772",
+    "weight": 1,
+    "dramas": [
+      "终极笔记"
+    ]
+  },
+  {
+    "source": "1398884",
+    "target": "1401585",
+    "weight": 1,
+    "dramas": [
+      "终极笔记"
+    ]
+  },
+  {
+    "source": "1401585",
+    "target": "1405772",
+    "weight": 1,
+    "dramas": [
+      "终极笔记"
+    ]
+  },
+  {
+    "source": "1351561",
+    "target": "1404638",
+    "weight": 1,
+    "dramas": [
+      "我才不要和你做朋友呢"
+    ]
+  },
+  {
+    "source": "1351561",
+    "target": "1382358",
+    "weight": 1,
+    "dramas": [
+      "我才不要和你做朋友呢"
+    ]
+  },
+  {
+    "source": "1351561",
+    "target": "1400166",
+    "weight": 1,
+    "dramas": [
+      "我才不要和你做朋友呢"
+    ]
+  },
+  {
+    "source": "1382358",
+    "target": "1404638",
+    "weight": 1,
+    "dramas": [
+      "我才不要和你做朋友呢"
+    ]
+  },
+  {
+    "source": "1400166",
+    "target": "1404638",
+    "weight": 1,
+    "dramas": [
+      "我才不要和你做朋友呢"
+    ]
+  },
+  {
+    "source": "1382358",
+    "target": "1400166",
+    "weight": 1,
+    "dramas": [
+      "我才不要和你做朋友呢"
+    ]
+  },
+  {
+    "source": "1274626",
+    "target": "1325412",
+    "weight": 1,
+    "dramas": [
+      "尘封十三载"
+    ]
+  },
+  {
+    "source": "1274626",
+    "target": "1323760",
+    "weight": 1,
+    "dramas": [
+      "尘封十三载"
+    ]
+  },
+  {
+    "source": "1274626",
+    "target": "1318610",
+    "weight": 1,
+    "dramas": [
+      "尘封十三载"
+    ]
+  },
+  {
+    "source": "1323760",
+    "target": "1325412",
+    "weight": 1,
+    "dramas": [
+      "尘封十三载"
+    ]
+  },
+  {
+    "source": "1318610",
+    "target": "1325412",
+    "weight": 1,
+    "dramas": [
+      "尘封十三载"
+    ]
+  },
+  {
+    "source": "1318610",
+    "target": "1323760",
+    "weight": 1,
+    "dramas": [
+      "尘封十三载"
+    ]
+  },
+  {
+    "source": "1352813",
+    "target": "1386911",
+    "weight": 1,
+    "dramas": [
+      "御赐小仵作"
+    ]
+  },
+  {
+    "source": "1352813",
+    "target": "1373310",
+    "weight": 1,
+    "dramas": [
+      "御赐小仵作"
+    ]
+  },
+  {
+    "source": "1352813",
+    "target": "1374390",
+    "weight": 1,
+    "dramas": [
+      "御赐小仵作"
+    ]
+  },
+  {
+    "source": "1373310",
+    "target": "1386911",
+    "weight": 1,
+    "dramas": [
+      "御赐小仵作"
+    ]
+  },
+  {
+    "source": "1374390",
+    "target": "1386911",
+    "weight": 1,
+    "dramas": [
+      "御赐小仵作"
+    ]
+  },
+  {
+    "source": "1373310",
+    "target": "1374390",
+    "weight": 1,
+    "dramas": [
+      "御赐小仵作"
+    ]
+  },
+  {
+    "source": "1037098",
+    "target": "1357104",
+    "weight": 1,
+    "dramas": [
+      "边水往事"
+    ]
+  },
+  {
+    "source": "1301518",
+    "target": "1357104",
+    "weight": 1,
+    "dramas": [
+      "边水往事"
+    ]
+  },
+  {
+    "source": "1317139",
+    "target": "1357104",
+    "weight": 1,
+    "dramas": [
+      "边水往事"
+    ]
+  },
+  {
+    "source": "1037098",
+    "target": "1301518",
+    "weight": 1,
+    "dramas": [
+      "边水往事"
+    ]
+  },
+  {
+    "source": "1037098",
+    "target": "1317139",
+    "weight": 1,
+    "dramas": [
+      "边水往事"
+    ]
+  },
+  {
+    "source": "1301518",
+    "target": "1317139",
+    "weight": 1,
+    "dramas": [
+      "边水往事"
+    ]
+  },
+  {
     "source": "1019718",
-    "target": "1033280",
+    "target": "1245590",
     "weight": 1,
     "dramas": [
-      "正义女神"
+      "新闻女王"
     ]
   },
   {
-    "source": "1475648",
-    "target": "1596534",
+    "source": "1005727",
+    "target": "1019718",
     "weight": 1,
     "dramas": [
-      "中国奇谭2"
+      "新闻女王"
     ]
   },
   {
-    "source": "1009179",
-    "target": "1323729",
+    "source": "1019718",
+    "target": "1316094",
     "weight": 1,
     "dramas": [
-      "夜色正浓"
+      "新闻女王"
     ]
   },
   {
-    "source": "1274496",
-    "target": "1315861",
+    "source": "1005727",
+    "target": "1245590",
     "weight": 1,
     "dramas": [
-      "隐身的名字"
+      "新闻女王"
     ]
   },
   {
-    "source": "1275633",
-    "target": "1318720",
+    "source": "1245590",
+    "target": "1316094",
     "weight": 1,
     "dramas": [
-      "女神蒙上眼"
+      "新闻女王"
+    ]
+  },
+  {
+    "source": "1005727",
+    "target": "1316094",
+    "weight": 1,
+    "dramas": [
+      "新闻女王"
+    ]
+  },
+  {
+    "source": "1049732",
+    "target": "1325412",
+    "weight": 1,
+    "dramas": [
+      "梦华录"
+    ]
+  },
+  {
+    "source": "1049732",
+    "target": "1312846",
+    "weight": 1,
+    "dramas": [
+      "梦华录"
+    ]
+  },
+  {
+    "source": "1049732",
+    "target": "1345908",
+    "weight": 1,
+    "dramas": [
+      "梦华录"
+    ]
+  },
+  {
+    "source": "1312846",
+    "target": "1325412",
+    "weight": 1,
+    "dramas": [
+      "梦华录"
+    ]
+  },
+  {
+    "source": "1325412",
+    "target": "1345908",
+    "weight": 1,
+    "dramas": [
+      "梦华录"
+    ]
+  },
+  {
+    "source": "1312846",
+    "target": "1345908",
+    "weight": 1,
+    "dramas": [
+      "梦华录"
+    ]
+  },
+  {
+    "source": "1337036",
+    "target": "1342133",
+    "weight": 1,
+    "dramas": [
+      "开端"
+    ]
+  },
+  {
+    "source": "1322731",
+    "target": "1342133",
+    "weight": 1,
+    "dramas": [
+      "开端"
+    ]
+  },
+  {
+    "source": "1011562",
+    "target": "1342133",
+    "weight": 1,
+    "dramas": [
+      "开端"
+    ]
+  },
+  {
+    "source": "1322731",
+    "target": "1337036",
+    "weight": 1,
+    "dramas": [
+      "开端"
+    ]
+  },
+  {
+    "source": "1011562",
+    "target": "1337036",
+    "weight": 1,
+    "dramas": [
+      "开端"
+    ]
+  },
+  {
+    "source": "1011562",
+    "target": "1322731",
+    "weight": 1,
+    "dramas": [
+      "开端"
+    ]
+  },
+  {
+    "source": "1274274",
+    "target": "1312862",
+    "weight": 1,
+    "dramas": [
+      "摩天大楼"
+    ]
+  },
+  {
+    "source": "1033011",
+    "target": "1274274",
+    "weight": 1,
+    "dramas": [
+      "摩天大楼"
+    ]
+  },
+  {
+    "source": "1274274",
+    "target": "1313991",
+    "weight": 1,
+    "dramas": [
+      "摩天大楼"
+    ]
+  },
+  {
+    "source": "1033011",
+    "target": "1312862",
+    "weight": 1,
+    "dramas": [
+      "摩天大楼"
+    ]
+  },
+  {
+    "source": "1312862",
+    "target": "1313991",
+    "weight": 1,
+    "dramas": [
+      "摩天大楼"
+    ]
+  },
+  {
+    "source": "1033011",
+    "target": "1313991",
+    "weight": 1,
+    "dramas": [
+      "摩天大楼"
+    ]
+  },
+  {
+    "source": "1354775",
+    "target": "1407562",
+    "weight": 1,
+    "dramas": [
+      "风犬少年的天空"
+    ]
+  },
+  {
+    "source": "1354775",
+    "target": "1370070",
+    "weight": 1,
+    "dramas": [
+      "风犬少年的天空"
+    ]
+  },
+  {
+    "source": "1354775",
+    "target": "1386044",
+    "weight": 1,
+    "dramas": [
+      "风犬少年的天空"
+    ]
+  },
+  {
+    "source": "1370070",
+    "target": "1407562",
+    "weight": 1,
+    "dramas": [
+      "风犬少年的天空"
+    ]
+  },
+  {
+    "source": "1386044",
+    "target": "1407562",
+    "weight": 1,
+    "dramas": [
+      "风犬少年的天空"
+    ]
+  },
+  {
+    "source": "1370070",
+    "target": "1386044",
+    "weight": 1,
+    "dramas": [
+      "风犬少年的天空"
+    ]
+  },
+  {
+    "source": "1314140",
+    "target": "1315103",
+    "weight": 1,
+    "dramas": [
+      "隐秘而伟大"
+    ]
+  },
+  {
+    "source": "1314140",
+    "target": "1328201",
+    "weight": 1,
+    "dramas": [
+      "隐秘而伟大"
+    ]
+  },
+  {
+    "source": "1314140",
+    "target": "1322716",
+    "weight": 1,
+    "dramas": [
+      "隐秘而伟大"
+    ]
+  },
+  {
+    "source": "1315103",
+    "target": "1328201",
+    "weight": 1,
+    "dramas": [
+      "隐秘而伟大"
+    ]
+  },
+  {
+    "source": "1315103",
+    "target": "1322716",
+    "weight": 1,
+    "dramas": [
+      "隐秘而伟大"
+    ]
+  },
+  {
+    "source": "1322716",
+    "target": "1328201",
+    "weight": 1,
+    "dramas": [
+      "隐秘而伟大"
+    ]
+  },
+  {
+    "source": "1361032",
+    "target": "1390859",
+    "weight": 1,
+    "dramas": [
+      "九重紫"
+    ]
+  },
+  {
+    "source": "1361032",
+    "target": "1368475",
+    "weight": 1,
+    "dramas": [
+      "九重紫"
+    ]
+  },
+  {
+    "source": "1361032",
+    "target": "1371733",
+    "weight": 1,
+    "dramas": [
+      "九重紫"
+    ]
+  },
+  {
+    "source": "1368475",
+    "target": "1390859",
+    "weight": 1,
+    "dramas": [
+      "九重紫"
+    ]
+  },
+  {
+    "source": "1371733",
+    "target": "1390859",
+    "weight": 1,
+    "dramas": [
+      "九重紫"
+    ]
+  },
+  {
+    "source": "1368475",
+    "target": "1371733",
+    "weight": 1,
+    "dramas": [
+      "九重紫"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1354130",
+    "weight": 1,
+    "dramas": [
+      "追风者"
+    ]
+  },
+  {
+    "source": "1323174",
+    "target": "1354130",
+    "weight": 1,
+    "dramas": [
+      "追风者"
+    ]
+  },
+  {
+    "source": "1339958",
+    "target": "1354130",
+    "weight": 1,
+    "dramas": [
+      "追风者"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1323174",
+    "weight": 1,
+    "dramas": [
+      "追风者"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1339958",
+    "weight": 1,
+    "dramas": [
+      "追风者"
+    ]
+  },
+  {
+    "source": "1323174",
+    "target": "1339958",
+    "weight": 1,
+    "dramas": [
+      "追风者"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1355342",
+    "weight": 1,
+    "dramas": [
+      "长相思 第一季"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1442424",
+    "weight": 1,
+    "dramas": [
+      "长相思 第一季"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1459013",
+    "weight": 1,
+    "dramas": [
+      "长相思 第一季"
+    ]
+  },
+  {
+    "source": "1355342",
+    "target": "1442424",
+    "weight": 1,
+    "dramas": [
+      "长相思 第一季"
+    ]
+  },
+  {
+    "source": "1355342",
+    "target": "1459013",
+    "weight": 1,
+    "dramas": [
+      "长相思 第一季"
+    ]
+  },
+  {
+    "source": "1442424",
+    "target": "1459013",
+    "weight": 1,
+    "dramas": [
+      "长相思 第一季"
+    ]
+  },
+  {
+    "source": "1274705",
+    "target": "1313742",
+    "weight": 1,
+    "dramas": [
+      "我是刑警"
+    ]
+  },
+  {
+    "source": "1313742",
+    "target": "1314975",
+    "weight": 1,
+    "dramas": [
+      "我是刑警"
+    ]
+  },
+  {
+    "source": "1313742",
+    "target": "1317979",
+    "weight": 1,
+    "dramas": [
+      "我是刑警"
+    ]
+  },
+  {
+    "source": "1274705",
+    "target": "1314975",
+    "weight": 1,
+    "dramas": [
+      "我是刑警"
+    ]
+  },
+  {
+    "source": "1274705",
+    "target": "1317979",
+    "weight": 1,
+    "dramas": [
+      "我是刑警"
+    ]
+  },
+  {
+    "source": "1314975",
+    "target": "1317979",
+    "weight": 1,
+    "dramas": [
+      "我是刑警"
+    ]
+  },
+  {
+    "source": "1274274",
+    "target": "1276150",
+    "weight": 1,
+    "dramas": [
+      "星汉灿烂·月升沧海"
+    ]
+  },
+  {
+    "source": "1053438",
+    "target": "1276150",
+    "weight": 1,
+    "dramas": [
+      "星汉灿烂·月升沧海"
+    ]
+  },
+  {
+    "source": "1274274",
+    "target": "1385770",
+    "weight": 1,
+    "dramas": [
+      "星汉灿烂·月升沧海"
+    ]
+  },
+  {
+    "source": "1053438",
+    "target": "1274274",
+    "weight": 1,
+    "dramas": [
+      "星汉灿烂·月升沧海"
+    ]
+  },
+  {
+    "source": "1366646",
+    "target": "1407562",
+    "weight": 1,
+    "dramas": [
+      "点燃我，温暖你"
+    ]
+  },
+  {
+    "source": "1361763",
+    "target": "1366646",
+    "weight": 1,
+    "dramas": [
+      "点燃我，温暖你"
+    ]
+  },
+  {
+    "source": "1366646",
+    "target": "1418502",
+    "weight": 1,
+    "dramas": [
+      "点燃我，温暖你"
+    ]
+  },
+  {
+    "source": "1361763",
+    "target": "1407562",
+    "weight": 1,
+    "dramas": [
+      "点燃我，温暖你"
+    ]
+  },
+  {
+    "source": "1407562",
+    "target": "1418502",
+    "weight": 1,
+    "dramas": [
+      "点燃我，温暖你"
+    ]
+  },
+  {
+    "source": "1361763",
+    "target": "1418502",
+    "weight": 1,
+    "dramas": [
+      "点燃我，温暖你"
+    ]
+  },
+  {
+    "source": "1314047",
+    "target": "1318883",
+    "weight": 1,
+    "dramas": [
+      "叛逆者"
+    ]
+  },
+  {
+    "source": "1010208",
+    "target": "1318883",
+    "weight": 1,
+    "dramas": [
+      "叛逆者"
+    ]
+  },
+  {
+    "source": "1318883",
+    "target": "1323174",
+    "weight": 1,
+    "dramas": [
+      "叛逆者"
+    ]
+  },
+  {
+    "source": "1010208",
+    "target": "1314047",
+    "weight": 1,
+    "dramas": [
+      "叛逆者"
+    ]
+  },
+  {
+    "source": "1314047",
+    "target": "1323174",
+    "weight": 1,
+    "dramas": [
+      "叛逆者"
+    ]
+  },
+  {
+    "source": "1010208",
+    "target": "1323174",
+    "weight": 1,
+    "dramas": [
+      "叛逆者"
+    ]
+  },
+  {
+    "source": "1324173",
+    "target": "1337887",
+    "weight": 1,
+    "dramas": [
+      "乔家的儿女"
+    ]
+  },
+  {
+    "source": "1316387",
+    "target": "1337887",
+    "weight": 1,
+    "dramas": [
+      "乔家的儿女"
+    ]
+  },
+  {
+    "source": "1337887",
+    "target": "1355342",
+    "weight": 1,
+    "dramas": [
+      "乔家的儿女"
+    ]
+  },
+  {
+    "source": "1316387",
+    "target": "1324173",
+    "weight": 1,
+    "dramas": [
+      "乔家的儿女"
+    ]
+  },
+  {
+    "source": "1324173",
+    "target": "1355342",
+    "weight": 1,
+    "dramas": [
+      "乔家的儿女"
+    ]
+  },
+  {
+    "source": "1316387",
+    "target": "1355342",
+    "weight": 1,
+    "dramas": [
+      "乔家的儿女"
+    ]
+  },
+  {
+    "source": "1324173",
+    "target": "1360678",
+    "weight": 1,
+    "dramas": [
+      "无忧渡"
+    ]
+  },
+  {
+    "source": "1323037",
+    "target": "1360678",
+    "weight": 1,
+    "dramas": [
+      "无忧渡"
+    ]
+  },
+  {
+    "source": "1360678",
+    "target": "1440080",
+    "weight": 1,
+    "dramas": [
+      "无忧渡"
+    ]
+  },
+  {
+    "source": "1323037",
+    "target": "1324173",
+    "weight": 1,
+    "dramas": [
+      "无忧渡"
+    ]
+  },
+  {
+    "source": "1324173",
+    "target": "1440080",
+    "weight": 1,
+    "dramas": [
+      "无忧渡"
+    ]
+  },
+  {
+    "source": "1323037",
+    "target": "1440080",
+    "weight": 1,
+    "dramas": [
+      "无忧渡"
+    ]
+  },
+  {
+    "source": "1354078",
+    "target": "1388916",
+    "weight": 1,
+    "dramas": [
+      "永夜星河"
+    ]
+  },
+  {
+    "source": "1354078",
+    "target": "1361028",
+    "weight": 1,
+    "dramas": [
+      "永夜星河"
+    ]
+  },
+  {
+    "source": "1354078",
+    "target": "1404474",
+    "weight": 1,
+    "dramas": [
+      "永夜星河"
+    ]
+  },
+  {
+    "source": "1361028",
+    "target": "1388916",
+    "weight": 1,
+    "dramas": [
+      "永夜星河"
+    ]
+  },
+  {
+    "source": "1388916",
+    "target": "1404474",
+    "weight": 1,
+    "dramas": [
+      "永夜星河"
+    ]
+  },
+  {
+    "source": "1361028",
+    "target": "1404474",
+    "weight": 1,
+    "dramas": [
+      "永夜星河"
+    ]
+  },
+  {
+    "source": "1339588",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "梦中的那片海"
+    ]
+  },
+  {
+    "source": "1356529",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "梦中的那片海"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1339588",
+    "weight": 1,
+    "dramas": [
+      "梦中的那片海"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1356529",
+    "weight": 1,
+    "dramas": [
+      "梦中的那片海"
+    ]
+  },
+  {
+    "source": "1339588",
+    "target": "1356529",
+    "weight": 1,
+    "dramas": [
+      "梦中的那片海"
+    ]
+  },
+  {
+    "source": "1323398",
+    "target": "1342901",
+    "weight": 1,
+    "dramas": [
+      "琉璃"
+    ]
+  },
+  {
+    "source": "1323398",
+    "target": "1360675",
+    "weight": 1,
+    "dramas": [
+      "琉璃"
+    ]
+  },
+  {
+    "source": "1323398",
+    "target": "1329792",
+    "weight": 1,
+    "dramas": [
+      "琉璃"
+    ]
+  },
+  {
+    "source": "1342901",
+    "target": "1360675",
+    "weight": 1,
+    "dramas": [
+      "琉璃"
+    ]
+  },
+  {
+    "source": "1329792",
+    "target": "1342901",
+    "weight": 1,
+    "dramas": [
+      "琉璃"
+    ]
+  },
+  {
+    "source": "1329792",
+    "target": "1360675",
+    "weight": 1,
+    "dramas": [
+      "琉璃"
     ]
   },
   {
@@ -80,67 +2756,259 @@
     ]
   },
   {
-    "source": "1366646",
-    "target": "1392035",
+    "source": "1313324",
+    "target": "1353488",
     "weight": 1,
     "dramas": [
-      "纯真年代的爱情"
+      "骄阳似我"
     ]
   },
   {
-    "source": "1314222",
-    "target": "1362973",
+    "source": "1353488",
+    "target": "1481342",
     "weight": 1,
     "dramas": [
-      "除恶"
+      "骄阳似我"
     ]
   },
   {
-    "source": "1314064",
-    "target": "1317663",
+    "source": "1313324",
+    "target": "1337036",
     "weight": 1,
     "dramas": [
-      "九号秘事之黑帷背后"
+      "骄阳似我"
     ]
   },
   {
-    "source": "1375836",
-    "target": "1391806",
+    "source": "1337036",
+    "target": "1481342",
     "weight": 1,
     "dramas": [
-      "成何体统"
+      "骄阳似我"
     ]
   },
   {
-    "source": "1359404",
-    "target": "1369977",
+    "source": "1313324",
+    "target": "1481342",
     "weight": 1,
     "dramas": [
-      "我的妈妈是校花"
+      "骄阳似我"
     ]
   },
   {
-    "source": "1041404",
-    "target": "1275620",
+    "source": "1009179",
+    "target": "1049732",
     "weight": 1,
     "dramas": [
-      "小城大事"
+      "玫瑰的故事"
     ]
   },
   {
-    "source": "1345908",
-    "target": "1354775",
+    "source": "1049732",
+    "target": "1314535",
     "weight": 1,
     "dramas": [
-      "年少有为"
+      "玫瑰的故事"
     ]
   },
   {
-    "source": "1316331",
-    "target": "1361142",
+    "source": "1049732",
+    "target": "1315477",
     "weight": 1,
     "dramas": [
-      "好好的时光"
+      "玫瑰的故事"
+    ]
+  },
+  {
+    "source": "1009179",
+    "target": "1314535",
+    "weight": 1,
+    "dramas": [
+      "玫瑰的故事"
+    ]
+  },
+  {
+    "source": "1009179",
+    "target": "1315477",
+    "weight": 1,
+    "dramas": [
+      "玫瑰的故事"
+    ]
+  },
+  {
+    "source": "1314535",
+    "target": "1315477",
+    "weight": 1,
+    "dramas": [
+      "玫瑰的故事"
+    ]
+  },
+  {
+    "source": "1314123",
+    "target": "1323398",
+    "weight": 1,
+    "dramas": [
+      "底线"
+    ]
+  },
+  {
+    "source": "1314123",
+    "target": "1328103",
+    "weight": 1,
+    "dramas": [
+      "底线"
+    ]
+  },
+  {
+    "source": "1314123",
+    "target": "1389605",
+    "weight": 1,
+    "dramas": [
+      "底线"
+    ]
+  },
+  {
+    "source": "1323398",
+    "target": "1328103",
+    "weight": 1,
+    "dramas": [
+      "底线"
+    ]
+  },
+  {
+    "source": "1323398",
+    "target": "1389605",
+    "weight": 1,
+    "dramas": [
+      "底线"
+    ]
+  },
+  {
+    "source": "1328103",
+    "target": "1389605",
+    "weight": 1,
+    "dramas": [
+      "底线"
+    ]
+  },
+  {
+    "source": "1321055",
+    "target": "1330228",
+    "weight": 1,
+    "dramas": [
+      "滤镜"
+    ]
+  },
+  {
+    "source": "1321055",
+    "target": "1369578",
+    "weight": 1,
+    "dramas": [
+      "滤镜"
+    ]
+  },
+  {
+    "source": "1321055",
+    "target": "1416675",
+    "weight": 1,
+    "dramas": [
+      "滤镜"
+    ]
+  },
+  {
+    "source": "1330228",
+    "target": "1369578",
+    "weight": 1,
+    "dramas": [
+      "滤镜"
+    ]
+  },
+  {
+    "source": "1330228",
+    "target": "1416675",
+    "weight": 1,
+    "dramas": [
+      "滤镜"
+    ]
+  },
+  {
+    "source": "1369578",
+    "target": "1416675",
+    "weight": 1,
+    "dramas": [
+      "滤镜"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1313867",
+    "weight": 1,
+    "dramas": [
+      "庆余年 第二季"
+    ]
+  },
+  {
+    "source": "1045565",
+    "target": "1313867",
+    "weight": 1,
+    "dramas": [
+      "庆余年 第二季"
+    ]
+  },
+  {
+    "source": "1274840",
+    "target": "1313867",
+    "weight": 1,
+    "dramas": [
+      "庆余年 第二季"
+    ]
+  },
+  {
+    "source": "1045565",
+    "target": "1274844",
+    "weight": 1,
+    "dramas": [
+      "庆余年 第二季"
+    ]
+  },
+  {
+    "source": "1274840",
+    "target": "1274844",
+    "weight": 1,
+    "dramas": [
+      "庆余年 第二季"
+    ]
+  },
+  {
+    "source": "1045565",
+    "target": "1274840",
+    "weight": 1,
+    "dramas": [
+      "庆余年 第二季"
+    ]
+  },
+  {
+    "source": "1360678",
+    "target": "1374579",
+    "weight": 1,
+    "dramas": [
+      "周生如故"
+    ]
+  },
+  {
+    "source": "1360678",
+    "target": "1440104",
+    "weight": 1,
+    "dramas": [
+      "周生如故"
+    ]
+  },
+  {
+    "source": "1360678",
+    "target": "1401137",
+    "weight": 1,
+    "dramas": [
+      "周生如故"
     ]
   },
   {
@@ -148,28 +3016,1068 @@
     "target": "1440104",
     "weight": 1,
     "dramas": [
-      "唐宫奇案之青雾风鸣"
+      "周生如故"
     ]
   },
   {
-    "source": "1274254",
-    "target": "1274608",
+    "source": "1374579",
+    "target": "1401137",
     "weight": 1,
     "dramas": [
-      "秋雪漫过的冬天"
+      "周生如故"
     ]
   },
   {
-    "source": "1314064",
-    "target": "1392035",
+    "source": "1401137",
+    "target": "1440104",
     "weight": 1,
     "dramas": [
-      "有罪之身"
+      "周生如故"
+    ]
+  },
+  {
+    "source": "1385770",
+    "target": "1388916",
+    "weight": 1,
+    "dramas": [
+      "传闻中的陈芊芊"
+    ]
+  },
+  {
+    "source": "1385770",
+    "target": "1403394",
+    "weight": 1,
+    "dramas": [
+      "传闻中的陈芊芊"
+    ]
+  },
+  {
+    "source": "1384576",
+    "target": "1385770",
+    "weight": 1,
+    "dramas": [
+      "传闻中的陈芊芊"
+    ]
+  },
+  {
+    "source": "1388916",
+    "target": "1403394",
+    "weight": 1,
+    "dramas": [
+      "传闻中的陈芊芊"
+    ]
+  },
+  {
+    "source": "1384576",
+    "target": "1388916",
+    "weight": 1,
+    "dramas": [
+      "传闻中的陈芊芊"
+    ]
+  },
+  {
+    "source": "1384576",
+    "target": "1403394",
+    "weight": 1,
+    "dramas": [
+      "传闻中的陈芊芊"
+    ]
+  },
+  {
+    "source": "1274663",
+    "target": "1366978",
+    "weight": 1,
+    "dramas": [
+      "我是余欢水"
+    ]
+  },
+  {
+    "source": "1274663",
+    "target": "1314860",
+    "weight": 1,
+    "dramas": [
+      "我是余欢水"
+    ]
+  },
+  {
+    "source": "1274663",
+    "target": "1327329",
+    "weight": 1,
+    "dramas": [
+      "我是余欢水"
+    ]
+  },
+  {
+    "source": "1314860",
+    "target": "1366978",
+    "weight": 1,
+    "dramas": [
+      "我是余欢水"
+    ]
+  },
+  {
+    "source": "1327329",
+    "target": "1366978",
+    "weight": 1,
+    "dramas": [
+      "我是余欢水"
+    ]
+  },
+  {
+    "source": "1314860",
+    "target": "1327329",
+    "weight": 1,
+    "dramas": [
+      "我是余欢水"
+    ]
+  },
+  {
+    "source": "1052359",
+    "target": "1337644",
+    "weight": 1,
+    "dramas": [
+      "生万物"
+    ]
+  },
+  {
+    "source": "1052359",
+    "target": "1274306",
+    "weight": 1,
+    "dramas": [
+      "生万物"
+    ]
+  },
+  {
+    "source": "1052359",
+    "target": "1274437",
+    "weight": 1,
+    "dramas": [
+      "生万物"
+    ]
+  },
+  {
+    "source": "1274306",
+    "target": "1337644",
+    "weight": 1,
+    "dramas": [
+      "生万物"
+    ]
+  },
+  {
+    "source": "1274437",
+    "target": "1337644",
+    "weight": 1,
+    "dramas": [
+      "生万物"
+    ]
+  },
+  {
+    "source": "1274306",
+    "target": "1274437",
+    "weight": 1,
+    "dramas": [
+      "生万物"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1314535",
+    "weight": 1,
+    "dramas": [
+      "与凤行"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1397178",
+    "weight": 1,
+    "dramas": [
+      "与凤行"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1404476",
+    "weight": 1,
+    "dramas": [
+      "与凤行"
+    ]
+  },
+  {
+    "source": "1314535",
+    "target": "1397178",
+    "weight": 1,
+    "dramas": [
+      "与凤行"
+    ]
+  },
+  {
+    "source": "1314535",
+    "target": "1404476",
+    "weight": 1,
+    "dramas": [
+      "与凤行"
+    ]
+  },
+  {
+    "source": "1397178",
+    "target": "1404476",
+    "weight": 1,
+    "dramas": [
+      "与凤行"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1389411",
+    "weight": 1,
+    "dramas": [
+      "要久久爱"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1341795",
+    "weight": 1,
+    "dramas": [
+      "要久久爱"
+    ]
+  },
+  {
+    "source": "1313839",
+    "target": "1314124",
+    "weight": 1,
+    "dramas": [
+      "要久久爱"
+    ]
+  },
+  {
+    "source": "1341795",
+    "target": "1389411",
+    "weight": 1,
+    "dramas": [
+      "要久久爱"
+    ]
+  },
+  {
+    "source": "1313839",
+    "target": "1389411",
+    "weight": 1,
+    "dramas": [
+      "要久久爱"
+    ]
+  },
+  {
+    "source": "1313839",
+    "target": "1341795",
+    "weight": 1,
+    "dramas": [
+      "要久久爱"
+    ]
+  },
+  {
+    "source": "1275542",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "骄阳伴我"
+    ]
+  },
+  {
+    "source": "1316331",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "骄阳伴我"
+    ]
+  },
+  {
+    "source": "1317092",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "骄阳伴我"
+    ]
+  },
+  {
+    "source": "1275542",
+    "target": "1316331",
+    "weight": 1,
+    "dramas": [
+      "骄阳伴我"
+    ]
+  },
+  {
+    "source": "1275542",
+    "target": "1317092",
+    "weight": 1,
+    "dramas": [
+      "骄阳伴我"
+    ]
+  },
+  {
+    "source": "1316331",
+    "target": "1317092",
+    "weight": 1,
+    "dramas": [
+      "骄阳伴我"
+    ]
+  },
+  {
+    "source": "1342133",
+    "target": "1416752",
+    "weight": 1,
+    "dramas": [
+      "卿卿日常"
+    ]
+  },
+  {
+    "source": "1342133",
+    "target": "1361294",
+    "weight": 1,
+    "dramas": [
+      "卿卿日常"
+    ]
+  },
+  {
+    "source": "1274659",
+    "target": "1342133",
+    "weight": 1,
+    "dramas": [
+      "卿卿日常"
+    ]
+  },
+  {
+    "source": "1361294",
+    "target": "1416752",
+    "weight": 1,
+    "dramas": [
+      "卿卿日常"
+    ]
+  },
+  {
+    "source": "1274659",
+    "target": "1416752",
+    "weight": 1,
+    "dramas": [
+      "卿卿日常"
+    ]
+  },
+  {
+    "source": "1274659",
+    "target": "1361294",
+    "weight": 1,
+    "dramas": [
+      "卿卿日常"
+    ]
+  },
+  {
+    "source": "1275243",
+    "target": "1342133",
+    "weight": 1,
+    "dramas": [
+      "你是我的城池营垒"
+    ]
+  },
+  {
+    "source": "1275243",
+    "target": "1323174",
+    "weight": 1,
+    "dramas": [
+      "你是我的城池营垒"
+    ]
+  },
+  {
+    "source": "1275243",
+    "target": "1367185",
+    "weight": 1,
+    "dramas": [
+      "你是我的城池营垒"
+    ]
+  },
+  {
+    "source": "1323174",
+    "target": "1342133",
+    "weight": 1,
+    "dramas": [
+      "你是我的城池营垒"
+    ]
+  },
+  {
+    "source": "1342133",
+    "target": "1367185",
+    "weight": 1,
+    "dramas": [
+      "你是我的城池营垒"
+    ]
+  },
+  {
+    "source": "1323174",
+    "target": "1367185",
+    "weight": 1,
+    "dramas": [
+      "你是我的城池营垒"
+    ]
+  },
+  {
+    "source": "1360615",
+    "target": "1407562",
+    "weight": 1,
+    "dramas": [
+      "藏海传"
+    ]
+  },
+  {
+    "source": "1360615",
+    "target": "1404157",
+    "weight": 1,
+    "dramas": [
+      "藏海传"
+    ]
+  },
+  {
+    "source": "1275273",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "藏海传"
+    ]
+  },
+  {
+    "source": "1404157",
+    "target": "1407562",
+    "weight": 1,
+    "dramas": [
+      "藏海传"
+    ]
+  },
+  {
+    "source": "1275273",
+    "target": "1407562",
+    "weight": 1,
+    "dramas": [
+      "藏海传"
+    ]
+  },
+  {
+    "source": "1275273",
+    "target": "1404157",
+    "weight": 1,
+    "dramas": [
+      "藏海传"
+    ]
+  },
+  {
+    "source": "1313265",
+    "target": "1323398",
+    "weight": 1,
+    "dramas": [
+      "深潜"
+    ]
+  },
+  {
+    "source": "1320874",
+    "target": "1323398",
+    "weight": 1,
+    "dramas": [
+      "深潜"
+    ]
+  },
+  {
+    "source": "1318055",
+    "target": "1323398",
+    "weight": 1,
+    "dramas": [
+      "深潜"
+    ]
+  },
+  {
+    "source": "1313265",
+    "target": "1320874",
+    "weight": 1,
+    "dramas": [
+      "深潜"
+    ]
+  },
+  {
+    "source": "1313265",
+    "target": "1318055",
+    "weight": 1,
+    "dramas": [
+      "深潜"
+    ]
+  },
+  {
+    "source": "1318055",
+    "target": "1320874",
+    "weight": 1,
+    "dramas": [
+      "深潜"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1276171",
+    "weight": 1,
+    "dramas": [
+      "幸福到万家"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1322805",
+    "weight": 1,
+    "dramas": [
+      "幸福到万家"
+    ]
+  },
+  {
+    "source": "1276171",
+    "target": "1313885",
+    "weight": 1,
+    "dramas": [
+      "幸福到万家"
+    ]
+  },
+  {
+    "source": "1276171",
+    "target": "1322805",
+    "weight": 1,
+    "dramas": [
+      "幸福到万家"
+    ]
+  },
+  {
+    "source": "1313885",
+    "target": "1322805",
+    "weight": 1,
+    "dramas": [
+      "幸福到万家"
+    ]
+  },
+  {
+    "source": "1053581",
+    "target": "1338949",
+    "weight": 1,
+    "dramas": [
+      "扫黑风暴"
+    ]
+  },
+  {
+    "source": "1053581",
+    "target": "1322731",
+    "weight": 1,
+    "dramas": [
+      "扫黑风暴"
+    ]
+  },
+  {
+    "source": "1053581",
+    "target": "1310696",
+    "weight": 1,
+    "dramas": [
+      "扫黑风暴"
+    ]
+  },
+  {
+    "source": "1322731",
+    "target": "1338949",
+    "weight": 1,
+    "dramas": [
+      "扫黑风暴"
+    ]
+  },
+  {
+    "source": "1310696",
+    "target": "1338949",
+    "weight": 1,
+    "dramas": [
+      "扫黑风暴"
+    ]
+  },
+  {
+    "source": "1310696",
+    "target": "1322731",
+    "weight": 1,
+    "dramas": [
+      "扫黑风暴"
+    ]
+  },
+  {
+    "source": "1316387",
+    "target": "1318883",
+    "weight": 1,
+    "dramas": [
+      "重启之极海听雷 第一季"
+    ]
+  },
+  {
+    "source": "1032540",
+    "target": "1318883",
+    "weight": 1,
+    "dramas": [
+      "重启之极海听雷 第一季"
+    ]
+  },
+  {
+    "source": "1275675",
+    "target": "1318883",
+    "weight": 1,
+    "dramas": [
+      "重启之极海听雷 第一季"
+    ]
+  },
+  {
+    "source": "1032540",
+    "target": "1316387",
+    "weight": 1,
+    "dramas": [
+      "重启之极海听雷 第一季"
+    ]
+  },
+  {
+    "source": "1275675",
+    "target": "1316387",
+    "weight": 1,
+    "dramas": [
+      "重启之极海听雷 第一季"
+    ]
+  },
+  {
+    "source": "1032540",
+    "target": "1275675",
+    "weight": 1,
+    "dramas": [
+      "重启之极海听雷 第一季"
+    ]
+  },
+  {
+    "source": "1337644",
+    "target": "1374579",
+    "weight": 1,
+    "dramas": [
+      "北上"
+    ]
+  },
+  {
+    "source": "1374579",
+    "target": "1392912",
+    "weight": 1,
+    "dramas": [
+      "北上"
+    ]
+  },
+  {
+    "source": "1374579",
+    "target": "1383924",
+    "weight": 1,
+    "dramas": [
+      "北上"
+    ]
+  },
+  {
+    "source": "1337644",
+    "target": "1392912",
+    "weight": 1,
+    "dramas": [
+      "北上"
+    ]
+  },
+  {
+    "source": "1337644",
+    "target": "1383924",
+    "weight": 1,
+    "dramas": [
+      "北上"
+    ]
+  },
+  {
+    "source": "1383924",
+    "target": "1392912",
+    "weight": 1,
+    "dramas": [
+      "北上"
+    ]
+  },
+  {
+    "source": "1274628",
+    "target": "1386044",
+    "weight": 1,
+    "dramas": [
+      "新生"
+    ]
+  },
+  {
+    "source": "1274628",
+    "target": "1322085",
+    "weight": 1,
+    "dramas": [
+      "新生"
+    ]
+  },
+  {
+    "source": "1274628",
+    "target": "1275273",
+    "weight": 1,
+    "dramas": [
+      "新生"
+    ]
+  },
+  {
+    "source": "1322085",
+    "target": "1386044",
+    "weight": 1,
+    "dramas": [
+      "新生"
+    ]
+  },
+  {
+    "source": "1275273",
+    "target": "1386044",
+    "weight": 1,
+    "dramas": [
+      "新生"
+    ]
+  },
+  {
+    "source": "1275273",
+    "target": "1322085",
+    "weight": 1,
+    "dramas": [
+      "新生"
+    ]
+  },
+  {
+    "source": "1257882",
+    "target": "1266497",
+    "weight": 1,
+    "dramas": [
+      "唐人街探案"
+    ]
+  },
+  {
+    "source": "1266497",
+    "target": "1346550",
+    "weight": 1,
+    "dramas": [
+      "唐人街探案"
+    ]
+  },
+  {
+    "source": "1266497",
+    "target": "1363943",
+    "weight": 1,
+    "dramas": [
+      "唐人街探案"
+    ]
+  },
+  {
+    "source": "1257882",
+    "target": "1346550",
+    "weight": 1,
+    "dramas": [
+      "唐人街探案"
+    ]
+  },
+  {
+    "source": "1257882",
+    "target": "1363943",
+    "weight": 1,
+    "dramas": [
+      "唐人街探案"
+    ]
+  },
+  {
+    "source": "1346550",
+    "target": "1363943",
+    "weight": 1,
+    "dramas": [
+      "唐人街探案"
+    ]
+  },
+  {
+    "source": "1322731",
+    "target": "1323398",
+    "weight": 1,
+    "dramas": [
+      "长安二十四计"
+    ]
+  },
+  {
+    "source": "1313468",
+    "target": "1323398",
+    "weight": 1,
+    "dramas": [
+      "长安二十四计"
+    ]
+  },
+  {
+    "source": "1323398",
+    "target": "1404157",
+    "weight": 1,
+    "dramas": [
+      "长安二十四计"
+    ]
+  },
+  {
+    "source": "1313468",
+    "target": "1322731",
+    "weight": 1,
+    "dramas": [
+      "长安二十四计"
+    ]
+  },
+  {
+    "source": "1322731",
+    "target": "1404157",
+    "weight": 1,
+    "dramas": [
+      "长安二十四计"
+    ]
+  },
+  {
+    "source": "1313468",
+    "target": "1404157",
+    "weight": 1,
+    "dramas": [
+      "长安二十四计"
+    ]
+  },
+  {
+    "source": "1313839",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "利剑·玫瑰"
+    ]
+  },
+  {
+    "source": "1301518",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "利剑·玫瑰"
+    ]
+  },
+  {
+    "source": "1325127",
+    "target": "1416026",
+    "weight": 1,
+    "dramas": [
+      "利剑·玫瑰"
+    ]
+  },
+  {
+    "source": "1301518",
+    "target": "1313839",
+    "weight": 1,
+    "dramas": [
+      "利剑·玫瑰"
+    ]
+  },
+  {
+    "source": "1313839",
+    "target": "1416026",
+    "weight": 1,
+    "dramas": [
+      "利剑·玫瑰"
+    ]
+  },
+  {
+    "source": "1301518",
+    "target": "1416026",
+    "weight": 1,
+    "dramas": [
+      "利剑·玫瑰"
+    ]
+  },
+  {
+    "source": "1276051",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "你是我的荣耀"
+    ]
+  },
+  {
+    "source": "1046960",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "你是我的荣耀"
+    ]
+  },
+  {
+    "source": "1274939",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "你是我的荣耀"
+    ]
+  },
+  {
+    "source": "1046960",
+    "target": "1276051",
+    "weight": 1,
+    "dramas": [
+      "你是我的荣耀"
+    ]
+  },
+  {
+    "source": "1274939",
+    "target": "1276051",
+    "weight": 1,
+    "dramas": [
+      "你是我的荣耀"
+    ]
+  },
+  {
+    "source": "1046960",
+    "target": "1274939",
+    "weight": 1,
+    "dramas": [
+      "你是我的荣耀"
+    ]
+  },
+  {
+    "source": "1275432",
+    "target": "1349994",
+    "weight": 1,
+    "dramas": [
+      "司藤"
+    ]
+  },
+  {
+    "source": "1275432",
+    "target": "1369029",
+    "weight": 1,
+    "dramas": [
+      "司藤"
+    ]
+  },
+  {
+    "source": "1275432",
+    "target": "1356221",
+    "weight": 1,
+    "dramas": [
+      "司藤"
+    ]
+  },
+  {
+    "source": "1349994",
+    "target": "1369029",
+    "weight": 1,
+    "dramas": [
+      "司藤"
+    ]
+  },
+  {
+    "source": "1349994",
+    "target": "1356221",
+    "weight": 1,
+    "dramas": [
+      "司藤"
+    ]
+  },
+  {
+    "source": "1356221",
+    "target": "1369029",
+    "weight": 1,
+    "dramas": [
+      "司藤"
+    ]
+  },
+  {
+    "source": "1313784",
+    "target": "1313842",
+    "weight": 1,
+    "dramas": [
+      "爱情公寓5"
+    ]
+  },
+  {
+    "source": "1313784",
+    "target": "1313843",
+    "weight": 1,
+    "dramas": [
+      "爱情公寓5"
+    ]
+  },
+  {
+    "source": "1313030",
+    "target": "1313784",
+    "weight": 1,
+    "dramas": [
+      "爱情公寓5"
+    ]
+  },
+  {
+    "source": "1313842",
+    "target": "1313843",
+    "weight": 1,
+    "dramas": [
+      "爱情公寓5"
+    ]
+  },
+  {
+    "source": "1313030",
+    "target": "1313842",
+    "weight": 1,
+    "dramas": [
+      "爱情公寓5"
+    ]
+  },
+  {
+    "source": "1313030",
+    "target": "1313843",
+    "weight": 1,
+    "dramas": [
+      "爱情公寓5"
     ]
   },
   {
     "source": "1315729",
     "target": "1359141",
+    "weight": 1,
+    "dramas": [
+      "玉茗茶骨"
+    ]
+  },
+  {
+    "source": "1348101",
+    "target": "1359141",
+    "weight": 1,
+    "dramas": [
+      "玉茗茶骨"
+    ]
+  },
+  {
+    "source": "1359141",
+    "target": "1385789",
+    "weight": 1,
+    "dramas": [
+      "玉茗茶骨"
+    ]
+  },
+  {
+    "source": "1315729",
+    "target": "1348101",
+    "weight": 1,
+    "dramas": [
+      "玉茗茶骨"
+    ]
+  },
+  {
+    "source": "1315729",
+    "target": "1385789",
+    "weight": 1,
+    "dramas": [
+      "玉茗茶骨"
+    ]
+  },
+  {
+    "source": "1348101",
+    "target": "1385789",
     "weight": 1,
     "dramas": [
       "玉茗茶骨"
@@ -184,19 +4092,315 @@
     ]
   },
   {
-    "source": "1407283",
-    "target": "1412762",
+    "source": "1354442",
+    "target": "1374407",
     "weight": 1,
     "dramas": [
-      "你好1983"
+      "罚罪2"
     ]
   },
   {
-    "source": "1274301",
-    "target": "1275443",
+    "source": "1313837",
+    "target": "1374407",
     "weight": 1,
     "dramas": [
-      "暗恋者的救赎"
+      "罚罪2"
+    ]
+  },
+  {
+    "source": "1274703",
+    "target": "1313837",
+    "weight": 1,
+    "dramas": [
+      "罚罪2"
+    ]
+  },
+  {
+    "source": "1274703",
+    "target": "1374407",
+    "weight": 1,
+    "dramas": [
+      "罚罪2"
+    ]
+  },
+  {
+    "source": "1342249",
+    "target": "1397178",
+    "weight": 1,
+    "dramas": [
+      "雁回时"
+    ]
+  },
+  {
+    "source": "1328277",
+    "target": "1342249",
+    "weight": 1,
+    "dramas": [
+      "雁回时"
+    ]
+  },
+  {
+    "source": "1274271",
+    "target": "1342249",
+    "weight": 1,
+    "dramas": [
+      "雁回时"
+    ]
+  },
+  {
+    "source": "1328277",
+    "target": "1397178",
+    "weight": 1,
+    "dramas": [
+      "雁回时"
+    ]
+  },
+  {
+    "source": "1274271",
+    "target": "1397178",
+    "weight": 1,
+    "dramas": [
+      "雁回时"
+    ]
+  },
+  {
+    "source": "1274271",
+    "target": "1328277",
+    "weight": 1,
+    "dramas": [
+      "雁回时"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1275178",
+    "weight": 1,
+    "dramas": [
+      "以法之名"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1314821",
+    "weight": 1,
+    "dramas": [
+      "以法之名"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1312909",
+    "weight": 1,
+    "dramas": [
+      "以法之名"
+    ]
+  },
+  {
+    "source": "1275178",
+    "target": "1312909",
+    "weight": 1,
+    "dramas": [
+      "以法之名"
+    ]
+  },
+  {
+    "source": "1312909",
+    "target": "1314821",
+    "weight": 1,
+    "dramas": [
+      "以法之名"
+    ]
+  },
+  {
+    "source": "1315030",
+    "target": "1359081",
+    "weight": 1,
+    "dramas": [
+      "一闪一闪亮星星"
+    ]
+  },
+  {
+    "source": "1315030",
+    "target": "1383959",
+    "weight": 1,
+    "dramas": [
+      "一闪一闪亮星星"
+    ]
+  },
+  {
+    "source": "1315030",
+    "target": "1393881",
+    "weight": 1,
+    "dramas": [
+      "一闪一闪亮星星"
+    ]
+  },
+  {
+    "source": "1359081",
+    "target": "1383959",
+    "weight": 1,
+    "dramas": [
+      "一闪一闪亮星星"
+    ]
+  },
+  {
+    "source": "1359081",
+    "target": "1393881",
+    "weight": 1,
+    "dramas": [
+      "一闪一闪亮星星"
+    ]
+  },
+  {
+    "source": "1383959",
+    "target": "1393881",
+    "weight": 1,
+    "dramas": [
+      "一闪一闪亮星星"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1339594",
+    "weight": 1,
+    "dramas": [
+      "重生之门"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1325753",
+    "weight": 1,
+    "dramas": [
+      "重生之门"
+    ]
+  },
+  {
+    "source": "1274761",
+    "target": "1429870",
+    "weight": 1,
+    "dramas": [
+      "重生之门"
+    ]
+  },
+  {
+    "source": "1325753",
+    "target": "1339594",
+    "weight": 1,
+    "dramas": [
+      "重生之门"
+    ]
+  },
+  {
+    "source": "1339594",
+    "target": "1429870",
+    "weight": 1,
+    "dramas": [
+      "重生之门"
+    ]
+  },
+  {
+    "source": "1325753",
+    "target": "1429870",
+    "weight": 1,
+    "dramas": [
+      "重生之门"
+    ]
+  },
+  {
+    "source": "1325127",
+    "target": "1337794",
+    "weight": 1,
+    "dramas": [
+      "三生三世枕上书"
+    ]
+  },
+  {
+    "source": "1275675",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "三生三世枕上书"
+    ]
+  },
+  {
+    "source": "1275504",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "三生三世枕上书"
+    ]
+  },
+  {
+    "source": "1275675",
+    "target": "1337794",
+    "weight": 1,
+    "dramas": [
+      "三生三世枕上书"
+    ]
+  },
+  {
+    "source": "1275504",
+    "target": "1337794",
+    "weight": 1,
+    "dramas": [
+      "三生三世枕上书"
+    ]
+  },
+  {
+    "source": "1275504",
+    "target": "1275675",
+    "weight": 1,
+    "dramas": [
+      "三生三世枕上书"
+    ]
+  },
+  {
+    "source": "1318061",
+    "target": "1353488",
+    "weight": 1,
+    "dramas": [
+      "以家人之名"
+    ]
+  },
+  {
+    "source": "1318061",
+    "target": "1333912",
+    "weight": 1,
+    "dramas": [
+      "以家人之名"
+    ]
+  },
+  {
+    "source": "1276048",
+    "target": "1318061",
+    "weight": 1,
+    "dramas": [
+      "以家人之名"
+    ]
+  },
+  {
+    "source": "1333912",
+    "target": "1353488",
+    "weight": 1,
+    "dramas": [
+      "以家人之名"
+    ]
+  },
+  {
+    "source": "1276048",
+    "target": "1353488",
+    "weight": 1,
+    "dramas": [
+      "以家人之名"
+    ]
+  },
+  {
+    "source": "1276048",
+    "target": "1333912",
+    "weight": 1,
+    "dramas": [
+      "以家人之名"
     ]
   },
   {
@@ -208,35 +4412,219 @@
     ]
   },
   {
-    "source": "1416752",
-    "target": "1421699",
+    "source": "1274479",
+    "target": "1313867",
     "weight": 1,
     "dramas": [
-      "逐玉"
+      "人之初"
     ]
   },
   {
-    "source": "1276032",
-    "target": "1354442",
+    "source": "1275243",
+    "target": "1275934",
     "weight": 1,
     "dramas": [
-      "岁月有情时"
+      "人之初"
     ]
   },
   {
-    "source": "1318061",
-    "target": "1330507",
+    "source": "1274479",
+    "target": "1275243",
     "weight": 1,
     "dramas": [
-      "我的山与海"
+      "人之初"
     ]
   },
   {
-    "source": "1366884",
-    "target": "1425257",
+    "source": "1274479",
+    "target": "1275934",
     "weight": 1,
     "dramas": [
-      "轧戏"
+      "人之初"
+    ]
+  },
+  {
+    "source": "1363943",
+    "target": "1385770",
+    "weight": 1,
+    "dramas": [
+      "偷偷藏不住"
+    ]
+  },
+  {
+    "source": "1378212",
+    "target": "1385770",
+    "weight": 1,
+    "dramas": [
+      "偷偷藏不住"
+    ]
+  },
+  {
+    "source": "1363943",
+    "target": "1378212",
+    "weight": 1,
+    "dramas": [
+      "偷偷藏不住"
+    ]
+  },
+  {
+    "source": "1053438",
+    "target": "1363943",
+    "weight": 1,
+    "dramas": [
+      "偷偷藏不住"
+    ]
+  },
+  {
+    "source": "1053438",
+    "target": "1378212",
+    "weight": 1,
+    "dramas": [
+      "偷偷藏不住"
+    ]
+  },
+  {
+    "source": "1324173",
+    "target": "1401585",
+    "weight": 1,
+    "dramas": [
+      "折腰"
+    ]
+  },
+  {
+    "source": "1323763",
+    "target": "1324173",
+    "weight": 1,
+    "dramas": [
+      "折腰"
+    ]
+  },
+  {
+    "source": "1324173",
+    "target": "1376605",
+    "weight": 1,
+    "dramas": [
+      "折腰"
+    ]
+  },
+  {
+    "source": "1323763",
+    "target": "1401585",
+    "weight": 1,
+    "dramas": [
+      "折腰"
+    ]
+  },
+  {
+    "source": "1376605",
+    "target": "1401585",
+    "weight": 1,
+    "dramas": [
+      "折腰"
+    ]
+  },
+  {
+    "source": "1323763",
+    "target": "1376605",
+    "weight": 1,
+    "dramas": [
+      "折腰"
+    ]
+  },
+  {
+    "source": "1337020",
+    "target": "1440104",
+    "weight": 1,
+    "dramas": [
+      "墨雨云间"
+    ]
+  },
+  {
+    "source": "1337020",
+    "target": "1437328",
+    "weight": 1,
+    "dramas": [
+      "墨雨云间"
+    ]
+  },
+  {
+    "source": "1337020",
+    "target": "1455429",
+    "weight": 1,
+    "dramas": [
+      "墨雨云间"
+    ]
+  },
+  {
+    "source": "1437328",
+    "target": "1440104",
+    "weight": 1,
+    "dramas": [
+      "墨雨云间"
+    ]
+  },
+  {
+    "source": "1440104",
+    "target": "1455429",
+    "weight": 1,
+    "dramas": [
+      "墨雨云间"
+    ]
+  },
+  {
+    "source": "1437328",
+    "target": "1455429",
+    "weight": 1,
+    "dramas": [
+      "墨雨云间"
+    ]
+  },
+  {
+    "source": "1314047",
+    "target": "1323729",
+    "weight": 1,
+    "dramas": [
+      "三十而已"
+    ]
+  },
+  {
+    "source": "1321825",
+    "target": "1323729",
+    "weight": 1,
+    "dramas": [
+      "三十而已"
+    ]
+  },
+  {
+    "source": "1316387",
+    "target": "1323729",
+    "weight": 1,
+    "dramas": [
+      "三十而已"
+    ]
+  },
+  {
+    "source": "1314047",
+    "target": "1321825",
+    "weight": 1,
+    "dramas": [
+      "三十而已"
+    ]
+  },
+  {
+    "source": "1314047",
+    "target": "1316387",
+    "weight": 1,
+    "dramas": [
+      "三十而已"
+    ]
+  },
+  {
+    "source": "1316387",
+    "target": "1321825",
+    "weight": 1,
+    "dramas": [
+      "三十而已"
     ]
   },
   {
@@ -248,19 +4636,187 @@
     ]
   },
   {
-    "source": "1422650",
-    "target": "1428763",
+    "source": "1334950",
+    "target": "1337610",
     "weight": 1,
     "dramas": [
-      "炽热吸引"
+      "剥茧"
     ]
   },
   {
-    "source": "1274290",
-    "target": "1359728",
+    "source": "1334950",
+    "target": "1397511",
     "weight": 1,
     "dramas": [
-      "风过留痕"
+      "剥茧"
+    ]
+  },
+  {
+    "source": "1276157",
+    "target": "1337610",
+    "weight": 1,
+    "dramas": [
+      "剥茧"
+    ]
+  },
+  {
+    "source": "1276157",
+    "target": "1397511",
+    "weight": 1,
+    "dramas": [
+      "剥茧"
+    ]
+  },
+  {
+    "source": "1337610",
+    "target": "1397511",
+    "weight": 1,
+    "dramas": [
+      "剥茧"
+    ]
+  },
+  {
+    "source": "1275970",
+    "target": "1385770",
+    "weight": 1,
+    "dramas": [
+      "许我耀眼"
+    ]
+  },
+  {
+    "source": "1385770",
+    "target": "1403999",
+    "weight": 1,
+    "dramas": [
+      "许我耀眼"
+    ]
+  },
+  {
+    "source": "1355332",
+    "target": "1385770",
+    "weight": 1,
+    "dramas": [
+      "许我耀眼"
+    ]
+  },
+  {
+    "source": "1275970",
+    "target": "1403999",
+    "weight": 1,
+    "dramas": [
+      "许我耀眼"
+    ]
+  },
+  {
+    "source": "1275970",
+    "target": "1355332",
+    "weight": 1,
+    "dramas": [
+      "许我耀眼"
+    ]
+  },
+  {
+    "source": "1355332",
+    "target": "1403999",
+    "weight": 1,
+    "dramas": [
+      "许我耀眼"
+    ]
+  },
+  {
+    "source": "1360615",
+    "target": "1392214",
+    "weight": 1,
+    "dramas": [
+      "斗罗大陆"
+    ]
+  },
+  {
+    "source": "1313897",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "斗罗大陆"
+    ]
+  },
+  {
+    "source": "1313027",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "斗罗大陆"
+    ]
+  },
+  {
+    "source": "1313897",
+    "target": "1392214",
+    "weight": 1,
+    "dramas": [
+      "斗罗大陆"
+    ]
+  },
+  {
+    "source": "1313027",
+    "target": "1392214",
+    "weight": 1,
+    "dramas": [
+      "斗罗大陆"
+    ]
+  },
+  {
+    "source": "1313027",
+    "target": "1313897",
+    "weight": 1,
+    "dramas": [
+      "斗罗大陆"
+    ]
+  },
+  {
+    "source": "1276105",
+    "target": "1354130",
+    "weight": 1,
+    "dramas": [
+      "风起洛阳"
+    ]
+  },
+  {
+    "source": "1276105",
+    "target": "1315608",
+    "weight": 1,
+    "dramas": [
+      "风起洛阳"
+    ]
+  },
+  {
+    "source": "1276105",
+    "target": "1319273",
+    "weight": 1,
+    "dramas": [
+      "风起洛阳"
+    ]
+  },
+  {
+    "source": "1315608",
+    "target": "1354130",
+    "weight": 1,
+    "dramas": [
+      "风起洛阳"
+    ]
+  },
+  {
+    "source": "1319273",
+    "target": "1354130",
+    "weight": 1,
+    "dramas": [
+      "风起洛阳"
+    ]
+  },
+  {
+    "source": "1315608",
+    "target": "1319273",
+    "weight": 1,
+    "dramas": [
+      "风起洛阳"
     ]
   },
   {
@@ -272,19 +4828,315 @@
     ]
   },
   {
-    "source": "1275649",
-    "target": "1401585",
+    "source": "1015713",
+    "target": "1326897",
     "weight": 1,
     "dramas": [
-      "玫瑰丛生"
+      "轻年"
     ]
   },
   {
-    "source": "1360248",
-    "target": "1366884",
+    "source": "1015713",
+    "target": "1275683",
     "weight": 1,
     "dramas": [
-      "突然的喜欢"
+      "轻年"
+    ]
+  },
+  {
+    "source": "1316331",
+    "target": "1326897",
+    "weight": 1,
+    "dramas": [
+      "轻年"
+    ]
+  },
+  {
+    "source": "1275683",
+    "target": "1316331",
+    "weight": 1,
+    "dramas": [
+      "轻年"
+    ]
+  },
+  {
+    "source": "1275683",
+    "target": "1326897",
+    "weight": 1,
+    "dramas": [
+      "轻年"
+    ]
+  },
+  {
+    "source": "1360615",
+    "target": "1397388",
+    "weight": 1,
+    "dramas": [
+      "玉骨遥"
+    ]
+  },
+  {
+    "source": "1359360",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "玉骨遥"
+    ]
+  },
+  {
+    "source": "1360615",
+    "target": "1375836",
+    "weight": 1,
+    "dramas": [
+      "玉骨遥"
+    ]
+  },
+  {
+    "source": "1359360",
+    "target": "1397388",
+    "weight": 1,
+    "dramas": [
+      "玉骨遥"
+    ]
+  },
+  {
+    "source": "1375836",
+    "target": "1397388",
+    "weight": 1,
+    "dramas": [
+      "玉骨遥"
+    ]
+  },
+  {
+    "source": "1359360",
+    "target": "1375836",
+    "weight": 1,
+    "dramas": [
+      "玉骨遥"
+    ]
+  },
+  {
+    "source": "1319273",
+    "target": "1357104",
+    "weight": 1,
+    "dramas": [
+      "赘婿"
+    ]
+  },
+  {
+    "source": "1316819",
+    "target": "1357104",
+    "weight": 1,
+    "dramas": [
+      "赘婿"
+    ]
+  },
+  {
+    "source": "1313422",
+    "target": "1357104",
+    "weight": 1,
+    "dramas": [
+      "赘婿"
+    ]
+  },
+  {
+    "source": "1316819",
+    "target": "1319273",
+    "weight": 1,
+    "dramas": [
+      "赘婿"
+    ]
+  },
+  {
+    "source": "1313422",
+    "target": "1319273",
+    "weight": 1,
+    "dramas": [
+      "赘婿"
+    ]
+  },
+  {
+    "source": "1313422",
+    "target": "1316819",
+    "weight": 1,
+    "dramas": [
+      "赘婿"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1383033",
+    "weight": 1,
+    "dramas": [
+      "承欢记"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1322716",
+    "weight": 1,
+    "dramas": [
+      "承欢记"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1354409",
+    "weight": 1,
+    "dramas": [
+      "承欢记"
+    ]
+  },
+  {
+    "source": "1322716",
+    "target": "1383033",
+    "weight": 1,
+    "dramas": [
+      "承欢记"
+    ]
+  },
+  {
+    "source": "1354409",
+    "target": "1383033",
+    "weight": 1,
+    "dramas": [
+      "承欢记"
+    ]
+  },
+  {
+    "source": "1322716",
+    "target": "1354409",
+    "weight": 1,
+    "dramas": [
+      "承欢记"
+    ]
+  },
+  {
+    "source": "1276150",
+    "target": "1325127",
+    "weight": 1,
+    "dramas": [
+      "长歌行"
+    ]
+  },
+  {
+    "source": "1325127",
+    "target": "1401585",
+    "weight": 1,
+    "dramas": [
+      "长歌行"
+    ]
+  },
+  {
+    "source": "1325127",
+    "target": "1385770",
+    "weight": 1,
+    "dramas": [
+      "长歌行"
+    ]
+  },
+  {
+    "source": "1276150",
+    "target": "1401585",
+    "weight": 1,
+    "dramas": [
+      "长歌行"
+    ]
+  },
+  {
+    "source": "1385770",
+    "target": "1401585",
+    "weight": 1,
+    "dramas": [
+      "长歌行"
+    ]
+  },
+  {
+    "source": "1274979",
+    "target": "1275620",
+    "weight": 1,
+    "dramas": [
+      "谁是凶手"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1330472",
+    "weight": 1,
+    "dramas": [
+      "谁是凶手"
+    ]
+  },
+  {
+    "source": "1275620",
+    "target": "1275747",
+    "weight": 1,
+    "dramas": [
+      "谁是凶手"
+    ]
+  },
+  {
+    "source": "1274979",
+    "target": "1330472",
+    "weight": 1,
+    "dramas": [
+      "谁是凶手"
+    ]
+  },
+  {
+    "source": "1274979",
+    "target": "1275747",
+    "weight": 1,
+    "dramas": [
+      "谁是凶手"
+    ]
+  },
+  {
+    "source": "1275747",
+    "target": "1330472",
+    "weight": 1,
+    "dramas": [
+      "谁是凶手"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1341187",
+    "weight": 1,
+    "dramas": [
+      "狼殿下"
+    ]
+  },
+  {
+    "source": "1341187",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "狼殿下"
+    ]
+  },
+  {
+    "source": "1318720",
+    "target": "1341187",
+    "weight": 1,
+    "dramas": [
+      "狼殿下"
+    ]
+  },
+  {
+    "source": "1274844",
+    "target": "1318720",
+    "weight": 1,
+    "dramas": [
+      "狼殿下"
+    ]
+  },
+  {
+    "source": "1318720",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "狼殿下"
     ]
   },
   {
@@ -296,99 +5148,179 @@
     ]
   },
   {
-    "source": "1359728",
-    "target": "1397388",
+    "source": "1318061",
+    "target": "1352236",
     "weight": 1,
     "dramas": [
-      "家事法庭"
+      "逍遥"
     ]
   },
   {
-    "source": "1337887",
-    "target": "1397180",
+    "source": "1318061",
+    "target": "1463705",
     "weight": 1,
     "dramas": [
-      "冬去春来"
+      "逍遥"
     ]
   },
   {
-    "source": "1349498",
-    "target": "1385466",
+    "source": "1352236",
+    "target": "1359141",
     "weight": 1,
     "dramas": [
-      "你是迟来的欢喜"
+      "逍遥"
     ]
   },
   {
-    "source": "1325127",
-    "target": "1366646",
+    "source": "1359141",
+    "target": "1463705",
     "weight": 1,
     "dramas": [
-      "白日提灯"
+      "逍遥"
     ]
   },
   {
-    "source": "1342439",
-    "target": "1462892",
+    "source": "1352236",
+    "target": "1463705",
     "weight": 1,
     "dramas": [
-      "在你眉梢种红豆"
+      "逍遥"
     ]
   },
   {
-    "source": "1359405",
-    "target": "1485502",
+    "source": "1323398",
+    "target": "1354284",
     "weight": 1,
     "dramas": [
-      "搜神记"
+      "天地剑心"
     ]
   },
   {
-    "source": "1403289",
-    "target": "1495701",
+    "source": "1323398",
+    "target": "1353861",
     "weight": 1,
     "dramas": [
-      "沧元图 前传：东宁府的夏天"
+      "天地剑心"
     ]
   },
   {
-    "source": "1356814",
-    "target": "1463369",
+    "source": "1274768",
+    "target": "1323398",
     "weight": 1,
     "dramas": [
-      "南相思"
+      "天地剑心"
     ]
   },
   {
-    "source": "1375962",
-    "target": "1405377",
+    "source": "1353861",
+    "target": "1354284",
     "weight": 1,
     "dramas": [
-      "季雨倾城"
+      "天地剑心"
     ]
   },
   {
-    "source": "1481342",
-    "target": "1536844",
+    "source": "1274768",
+    "target": "1354284",
     "weight": 1,
     "dramas": [
-      "我在大学修文物"
+      "天地剑心"
     ]
   },
   {
-    "source": "1321057",
-    "target": "1323727",
+    "source": "1274768",
+    "target": "1353861",
     "weight": 1,
     "dramas": [
-      "明珠奇谭"
+      "天地剑心"
     ]
   },
   {
-    "source": "1313237",
-    "target": "1316004",
+    "source": "1314124",
+    "target": "1360615",
     "weight": 1,
     "dramas": [
-      "心不由己"
+      "余生，请多指教"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1392912",
+    "weight": 1,
+    "dramas": [
+      "余生，请多指教"
+    ]
+  },
+  {
+    "source": "1314124",
+    "target": "1396518",
+    "weight": 1,
+    "dramas": [
+      "余生，请多指教"
+    ]
+  },
+  {
+    "source": "1360615",
+    "target": "1392912",
+    "weight": 1,
+    "dramas": [
+      "余生，请多指教"
+    ]
+  },
+  {
+    "source": "1360615",
+    "target": "1396518",
+    "weight": 1,
+    "dramas": [
+      "余生，请多指教"
+    ]
+  },
+  {
+    "source": "1392912",
+    "target": "1396518",
+    "weight": 1,
+    "dramas": [
+      "余生，请多指教"
+    ]
+  },
+  {
+    "source": "1354442",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "王牌部队"
+    ]
+  },
+  {
+    "source": "1354442",
+    "target": "1357009",
+    "weight": 1,
+    "dramas": [
+      "王牌部队"
+    ]
+  },
+  {
+    "source": "1357009",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "王牌部队"
+    ]
+  },
+  {
+    "source": "1274703",
+    "target": "1360615",
+    "weight": 1,
+    "dramas": [
+      "王牌部队"
+    ]
+  },
+  {
+    "source": "1274703",
+    "target": "1357009",
+    "weight": 1,
+    "dramas": [
+      "王牌部队"
     ]
   }
 ]
