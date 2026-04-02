@@ -315,10 +315,16 @@ const GraphCanvas = forwardRef<GraphCanvasRef, GraphCanvasProps>(
     }))
 
     function handleZoomIn() {
-      chartRef.current?.dispatchAction({ type: 'zoom', zoom: 1.3, originX: 0.5, originY: 0.5 })
+      if (!chartRef.current) return
+      const opt = chartRef.current.getOption() as { series: Array<{ zoom?: number }> }
+      const cur = opt.series?.[0]?.zoom ?? 1
+      chartRef.current.setOption({ series: [{ zoom: cur * 1.3 }] })
     }
     function handleZoomOut() {
-      chartRef.current?.dispatchAction({ type: 'zoom', zoom: 0.77, originX: 0.5, originY: 0.5 })
+      if (!chartRef.current) return
+      const opt = chartRef.current.getOption() as { series: Array<{ zoom?: number }> }
+      const cur = opt.series?.[0]?.zoom ?? 1
+      chartRef.current.setOption({ series: [{ zoom: Math.max(cur * 0.77, 0.1) }] })
     }
 
     return (

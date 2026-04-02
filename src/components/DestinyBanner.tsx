@@ -1,7 +1,11 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect, useCallback, forwardRef, useImperativeHandle } from 'react'
 import Graph from 'graphology'
 import { bidirectional } from 'graphology-shortest-path/unweighted'
 import type { StarNode, DramaEdge } from '../types'
+
+export interface DestinyBannerRef {
+  clear: () => void
+}
 
 export interface PathResult {
   nodeIds: string[]
@@ -224,9 +228,9 @@ interface DestinyBannerProps {
   onClear: () => void
 }
 
-export default function DestinyBanner({
+const DestinyBanner = forwardRef<DestinyBannerRef, DestinyBannerProps>(function DestinyBanner({
   nodes, edges, graph, onPathFound, onClear,
-}: DestinyBannerProps) {
+}, ref) {
   const [fromNode, setFromNode] = useState<StarNode | null>(null)
   const [toNode, setToNode] = useState<StarNode | null>(null)
   const [fromQuery, setFromQuery] = useState('')
@@ -239,6 +243,22 @@ export default function DestinyBanner({
   const [lineState, setLineState] = useState<'idle' | 'half' | 'active' | 'searching' | 'done' | 'notfound'>('idle')
   const [resultVisible, setResultVisible] = useState(false)
   const bannerRef = useRef<HTMLDivElement>(null)
+
+  // 暴露 clear 方法给父组件（重置按钮用）
+  useImperativeHandle(ref, () => ({
+    clear: () => {
+      setFromNode(null)
+      setToNode(null)
+      setFromQuery('')
+      setToQuery('')
+      setResult(null)
+      setResultVisible(false)
+      setErrorMsg('')
+      setLineState('idle')
+      setFromOpen(false)
+      setToOpen(false)
+    }
+  }))
 
   const filteredFrom = fromQuery ? nodes.filter(n => n.name.includes(fromQuery)).slice(0, 8) : []
   const filteredTo = toQuery ? nodes.filter(n => n.name.includes(toQuery)).slice(0, 8) : []
@@ -529,4 +549,6 @@ export default function DestinyBanner({
       </div>
     </div>
   )
-}
+})
+
+export default DestinyBanner

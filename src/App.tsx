@@ -4,7 +4,7 @@ import { useGraphology } from './hooks/useGraphology'
 import GraphCanvas, { type GraphCanvasRef } from './components/GraphCanvas'
 import SearchBar from './components/SearchBar'
 import StarDetailCard from './components/StarDetailCard'
-import DestinyBanner from './components/DestinyBanner'
+import DestinyBanner, { type DestinyBannerRef } from './components/DestinyBanner'
 import CentralityRank from './components/CentralityRank'
 import type { HighlightState } from './types'
 
@@ -12,6 +12,7 @@ export default function App() {
   const { data, meta, loading, error } = useGraphData()
   const graph = useGraphology(data)
   const canvasRef = useRef<GraphCanvasRef>(null)
+  const destinyRef = useRef<DestinyBannerRef>(null)
 
   const [highlight, setHighlight] = useState<HighlightState>({ mode: 'none' })
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null)
@@ -92,6 +93,7 @@ export default function App() {
     setSelectedNodeId(null)
     setSearchSelectedId(undefined)
     canvasRef.current?.resetLayout()
+    destinyRef.current?.clear()
   }, [])
 
   // Loading 骨架屏
@@ -181,6 +183,7 @@ export default function App() {
         <div className="flex-1 flex flex-col overflow-hidden min-w-0">
           <div className="shrink-0 z-10">
             <DestinyBanner
+              ref={destinyRef}
               nodes={data.nodes}
               edges={data.edges}
               graph={graph}
