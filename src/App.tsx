@@ -71,43 +71,23 @@ export default function App() {
     setHighlight({ mode: 'none' })
   }, [])
 
-  // 路径找到（DestinyBanner 回调）→ 起点点亮 + Canvas 笔触描线 + 沿途节点随描线逐步点亮
+  // 路径找到 → 直接更新 highlight state，ECharts 自动重绘粉色路径边
   const handlePathFound = useCallback((result: { nodeIds: string[]; edgeKeys: string[] } | null) => {
     if (!result) {
-      canvasRef.current?.clearOverlay()
       setHighlight({ mode: 'none' })
       return
     }
     const { nodeIds, edgeKeys } = result
-    const STEP_MS = Math.max((nodeIds.length - 1) * 620, 900) / (nodeIds.length - 1) // 每段时长
-
-    // 第 0 步：只点亮起点，其余全暗
     setHighlight({
       mode: 'path',
-      pathNodeIds: [nodeIds[0]],
-      pathEdgeIds: [],
-      highlightedNodeIds: new Set([nodeIds[0]]),
+      pathNodeIds: nodeIds,
+      pathEdgeIds: edgeKeys,
+      highlightedNodeIds: new Set(nodeIds),
     })
-
-    // 随笔触描线到达每个中间/终点节点时，追加点亮（180ms 为 revealPath 内部启动延迟）
-    nodeIds.slice(1).forEach((_, i) => {
-      setTimeout(() => {
-        setHighlight({
-          mode: 'path',
-          pathNodeIds: nodeIds.slice(0, i + 2),
-          pathEdgeIds: edgeKeys.slice(0, i + 1),
-          highlightedNodeIds: new Set(nodeIds.slice(0, i + 2)),
-        })
-      }, 180 + STEP_MS * (i + 1))
-    })
-
-    // 触发笔触描线动画（与节点逐步点亮同步运行）
-    canvasRef.current?.revealPath(nodeIds)
   }, [])
 
   // 重置图谱
   const handleReset = useCallback(() => {
-    canvasRef.current?.clearOverlay()
     setHighlight({ mode: 'none' })
     setSelectedNodeId(null)
     setSearchSelectedId(undefined)
@@ -205,10 +185,7 @@ export default function App() {
               edges={data.edges}
               graph={graph}
               onPathFound={handlePathFound}
-              onClear={() => {
-                canvasRef.current?.clearOverlay()
-                setHighlight({ mode: 'none' })
-              }}
+              onClear={() => setHighlight({ mode: 'none' })}
             />
           </div>
 

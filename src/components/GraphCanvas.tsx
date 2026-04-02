@@ -12,14 +12,56 @@ interface GraphCanvasProps {
 export interface GraphCanvasRef {
   focusNode: (nodeId: string) => void
   resetLayout: () => void
-  revealPath: (nodeIds: string[]) => void
-  clearOverlay: () => void
+}
+
+// ── 节点色板（8色，与深色背景搭配）─────────────────
+const NODE_PALETTE = [
+  '#F72585',  // 玫红
+  '#7209B7',  // 深紫
+  '#4361EE',  // 蓝紫
+  '#4CC9F0',  // 天蓝
+  '#F77F00',  // 橙
+  '#06D6A0',  // 青绿
+  '#FFD166',  // 金黄
+  '#EF233C',  // 红
+]
+
+// 给节点按权重顺序分配颜色，返回 nodeId → color 的 Map
+function buildNodeColorMap(nodes: StarNode[]): Map<string, string> {
+  const map = new Map<string, string>()
+  // nodes 已按 weight 降序排列，直接按顺序循环分配
+  nodes.forEach((n, i) => {
+    map.set(n.id, NODE_PALETTE[i % NODE_PALETTE.length])
+  })
+  return map
+}
+
+// 边宽度仅按合作剧数决定（粗细传达信息，颜色传达美感）
+function edgeWidthByWeight(count: number): number {
+  if (count >= 3) return 3.5
+  if (count === 2) return 2
+  return 1
+}
+
+// 构造 ECharts 渐变色对象（source节点色 → target节点色）
+function makeGradientColor(sourceColor: string, targetColor: string) {
+  return {
+    type: 'linear' as const,
+    x: 0, y: 0, x2: 1, y2: 0,
+    colorStops: [
+      { offset: 0, color: sourceColor + 'CC' },   // 80% 透明度
+      { offset: 1, color: targetColor + 'CC' },
+    ],
+  }
 }
 
 function buildEChartsOption(data: GraphData, highlight: HighlightState) {
   const { nodes, edges } = data
   const { mode, focusedNodeId, highlightedNodeIds, pathNodeIds, pathEdgeIds } = highlight
   const isHighlighting = mode !== 'none'
+
+  // 构建节点颜色映射（按权重顺序循环分配色板）
+  const nodeColorMap = buildNodeColorMap(nodes)
 
   const eNodes = nodes.map((n: StarNode) => {
     const isFocused = n.id === focusedNodeId
@@ -72,34 +114,47 @@ function buildEChartsOption(data: GraphData, highlight: HighlightState) {
       e.source === focusedNodeId || e.target === focusedNodeId ||
       highlightedNodeIds?.has(e.source) || highlightedNodeIds?.has(e.target)
 
-    const baseWidth = Math.min(1 + (e.dramas.length - 1) * 1.5, 5)
-    let lineColor = 'rgba(0,229,255,0.3)'
-    let lineWidth = baseWidth
-    let opacity = 1
-    let shadowBlur = 2
-    let shadowColor = 'rgba(0,229,255,0.2)'
+    // ── 宽度按合作剧数，颜色按节点渐变
+    const baseWidth = edgeWidthByWeight(e.dramas.length)
+    const srcColor = nodeColorMap.get(e.source) ?? '#4CC9F0'
+    const tgtColor = nodeColorMap.get(e.target) ?? '#4CC9F0'
+    const gradientColor = makeGradientColor(srcColor, tgtColor)
+
+    const dramaLabels = e.dramas.map(d => `《${d}》`).join('\n')
 
     if (isHighlighting) {
       if (isOnPath) {
-        // path 边由 overlay canvas 动画绘制，这里降低 ECharts 边透明度作为底色
-        lineColor = 'rgba(247,37,133,0.25)'
-        lineWidth = Math.max(baseWidth, 2)
-        shadowBlur = 0; opacity = 0.5
+        return {
+          source: e.source, target: e.target,
+          lineStyle: {
+            color: '#F72585', width: 3, opacity: 1,
+            curveness: 0.32, shadowBlur: 16, shadowColor: 'rgba(247,37,133,0.6)',
+          },
+          tooltip: { formatter: dramaLabels },
+        }
       } else if (isConnectedToFocus && (mode === 'search' || mode === 'node')) {
-        lineColor = '#00E5FF'; lineWidth = Math.max(baseWidth, 2)
-        shadowBlur = 10; shadowColor = 'rgba(0,229,255,0.6)'; opacity = 1
+        return {
+          source: e.source, target: e.target,
+          lineStyle: {
+            color: gradientColor, width: Math.max(baseWidth, 2), opacity: 1,
+            curveness: 0.32, shadowBlur: 10, shadowColor: srcColor + '99',
+          },
+          tooltip: { formatter: dramaLabels },
+        }
       } else {
-        opacity = 0.03; shadowBlur = 0
+        return {
+          source: e.source, target: e.target,
+          lineStyle: { color: gradientColor, width: baseWidth, opacity: 0.04, curveness: 0.32 },
+          tooltip: { formatter: dramaLabels },
+        }
       }
     }
 
-    const dramaLabels = e.dramas.map(d => `《${d}》`).join('\n')
     return {
       source: e.source, target: e.target,
       lineStyle: {
-        color: lineColor, width: lineWidth, opacity,
-        curveness: 0.32,  // 更平滑的曲线
-        shadowBlur, shadowColor,
+        color: gradientColor, width: baseWidth, opacity: 1,
+        curveness: 0.32, shadowBlur: 4, shadowColor: srcColor + '55',
       },
       tooltip: { formatter: dramaLabels },
     }
@@ -122,6 +177,7 @@ function buildEChartsOption(data: GraphData, highlight: HighlightState) {
       edges: eEdges,
       roam: true,
       draggable: true,
+      scaleLimit: { min: 0.3, max: 5 },
       force: {
         repulsion: 260,
         gravity: 0.08,
@@ -129,7 +185,6 @@ function buildEChartsOption(data: GraphData, highlight: HighlightState) {
         layoutAnimation: true,
         friction: 0.65,
       },
-      // 默认边样式（非高亮时）
       lineStyle: { color: 'rgba(0,229,255,0.28)', width: 1, curveness: 0.32 },
       emphasis: { focus: 'none', lineStyle: { width: 2, color: '#00E5FF' } },
       label: { show: true, position: 'bottom', fontSize: 11, color: '#94A3B8' },
@@ -137,249 +192,85 @@ function buildEChartsOption(data: GraphData, highlight: HighlightState) {
   }
 }
 
-// ── 笔触描线动画辅助 ──────────────────────────────
-function getPointAlongPath(
-  points: { x: number; y: number }[],
-  segLengths: number[],
-  totalLen: number,
-  t: number
-): { x: number; y: number } {
-  const target = totalLen * t
-  let acc = 0
-  for (let i = 0; i < segLengths.length; i++) {
-    if (acc + segLengths[i] >= target) {
-      const frac = (target - acc) / segLengths[i]
-      return {
-        x: points[i].x + (points[i + 1].x - points[i].x) * frac,
-        y: points[i].y + (points[i + 1].y - points[i].y) * frac,
-      }
-    }
-    acc += segLengths[i]
+// ── 缩放控件组件 ─────────────────────────────────
+interface ZoomControlsProps {
+  onZoomIn: () => void
+  onZoomOut: () => void
+  onReset: () => void
+}
+
+function ZoomControls({ onZoomIn, onZoomOut, onReset }: ZoomControlsProps) {
+  const btnBase: React.CSSProperties = {
+    width: '36px',
+    height: '36px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'transparent',
+    border: 'none',
+    color: '#64748B',
+    cursor: 'pointer',
+    fontSize: '16px',
+    transition: 'color 0.2s, text-shadow 0.2s',
   }
-  return points[points.length - 1]
+  const divider: React.CSSProperties = {
+    height: '1px',
+    background: 'rgba(0,229,255,0.12)',
+    margin: '0 8px',
+  }
+
+  function hoverOn(e: React.MouseEvent<HTMLButtonElement>) {
+    const el = e.currentTarget
+    el.style.color = '#00E5FF'
+    el.style.textShadow = '0 0 10px rgba(0,229,255,0.8)'
+  }
+  function hoverOff(e: React.MouseEvent<HTMLButtonElement>) {
+    const el = e.currentTarget
+    el.style.color = '#64748B'
+    el.style.textShadow = 'none'
+  }
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        right: '16px',
+        bottom: '16px',
+        display: 'flex',
+        flexDirection: 'column',
+        background: 'rgba(8,11,20,0.88)',
+        border: '1px solid rgba(0,229,255,0.2)',
+        borderRadius: '12px',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.5), 0 0 12px rgba(0,229,255,0.06)',
+        backdropFilter: 'blur(12px)',
+        overflow: 'hidden',
+        zIndex: 10,
+      }}
+    >
+      <button style={btnBase} title="放大" onClick={onZoomIn} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>＋</button>
+      <div style={divider} />
+      <button style={btnBase} title="缩小" onClick={onZoomOut} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>－</button>
+      <div style={divider} />
+      <button style={{ ...btnBase, fontSize: '11px', flexDirection: 'column', gap: '1px' } as React.CSSProperties}
+        title="重置视角" onClick={onReset} onMouseEnter={hoverOn} onMouseLeave={hoverOff}
+      >
+        <span style={{ fontSize: '14px', lineHeight: 1 }}>⊙</span>
+        <span style={{ fontSize: '9px', letterSpacing: '0.5px' }}>重置</span>
+      </button>
+    </div>
+  )
 }
 
 // ─────────────────────────────────────────────────
 const GraphCanvas = forwardRef<GraphCanvasRef, GraphCanvasProps>(
   ({ data, highlight, onNodeClick, onCanvasClick }, ref) => {
     const containerRef = useRef<HTMLDivElement>(null)
-    const overlayRef = useRef<HTMLCanvasElement>(null)
     const chartRef = useRef<echarts.ECharts | null>(null)
-    const animFrameRef = useRef<number>(0)
-    const nodePositionsRef = useRef<Map<string, { x: number; y: number }>>(new Map())
-    // 用 ref 追踪最新 data，供内部函数安全访问
-    const dataRef = useRef<GraphData | null>(null)
 
     const onNodeClickRef = useRef(onNodeClick)
     const onCanvasClickRef = useRef(onCanvasClick)
     useEffect(() => { onNodeClickRef.current = onNodeClick }, [onNodeClick])
     useEffect(() => { onCanvasClickRef.current = onCanvasClick }, [onCanvasClick])
-    useEffect(() => { dataRef.current = data }, [data])
-
-    /**
-     * 捕获节点像素坐标
-     * ECharts force 布局把坐标存在 node.x / node.y 上（而非 getLayout()）
-     * 按优先级依次尝试：node.x → getLayout() → dataItem.layout → getItemLayout(idx)
-     */
-    // 只做一次诊断，找到坐标真实存储位置
-    const _diagnosed = useRef(false)
-
-    function capturePositions(chart: echarts.ECharts) {
-      try {
-        const model = (chart as any).getModel()
-        if (!model) return
-        const seriesModel = model.getSeriesByIndex(0)
-        if (!seriesModel) return
-
-        const gData = seriesModel.getData()
-
-        // ── 诊断日志（只打一次，找到坐标到底在哪）
-        if (!_diagnosed.current) {
-          _diagnosed.current = true
-          console.group('[ECharts Diagnosis]')
-          console.log('seriesModel type:', seriesModel.type)
-          console.log('getGraph exists:', typeof seriesModel.getGraph)
-          if (typeof seriesModel.getGraph === 'function') {
-            const g = seriesModel.getGraph()
-            const firstNode = g?.nodes?.[0]
-            if (firstNode) {
-              console.log('node keys:', Object.keys(firstNode))
-              console.log('node.id:', firstNode.id)
-              console.log('node.x:', firstNode.x, 'node.y:', firstNode.y)
-              console.log('node.getLayout():', typeof firstNode.getLayout === 'function' ? firstNode.getLayout() : 'no method')
-              console.log('node.dataItem:', firstNode.dataItem)
-              console.log('node.hostGraph:', !!firstNode.hostGraph)
-            } else {
-              console.log('graph nodes:', g?.nodes)
-            }
-          }
-          console.log('gData.count():', gData.count())
-          if (gData.count() > 0) {
-            console.log('getItemLayout(0):', gData.getItemLayout(0))
-            const raw = gData.getRawDataItem(0)
-            console.log('getRawDataItem(0).id:', (raw as any)?.id)
-          }
-          console.groupEnd()
-        }
-
-        // ── 核心修复：layout 是数组 [x, y]，不是对象 {x, y}
-        let count = 0
-        if (typeof seriesModel.getGraph === 'function') {
-          seriesModel.getGraph().eachNode((node: any) => {
-            const id = node.id
-            if (id == null) return
-            const layout = typeof node.getLayout === 'function' ? node.getLayout() : null
-            // ECharts graph 的 layout 是 [x, y] 数组
-            if (Array.isArray(layout) && layout[0] != null) {
-              nodePositionsRef.current.set(String(id), { x: layout[0], y: layout[1] })
-              count++
-            }
-          })
-        }
-
-        // 索引兜底（layout 也是数组格式）
-        if (count === 0 && dataRef.current) {
-          dataRef.current.nodes.forEach((node, idx) => {
-            const layout = gData.getItemLayout(idx)
-            if (Array.isArray(layout) && layout[0] != null) {
-              nodePositionsRef.current.set(node.id, { x: layout[0], y: layout[1] })
-              count++
-            }
-          })
-        }
-      } catch (e) {
-        console.error('[capturePositions] error:', e)
-      }
-    }
-
-    // 清除 overlay 画布
-    function clearOverlay() {
-      cancelAnimationFrame(animFrameRef.current)
-      const overlay = overlayRef.current
-      if (!overlay) return
-      overlay.getContext('2d')?.clearRect(0, 0, overlay.width, overlay.height)
-    }
-
-    // 笔触生成动画：从起点到终点连续描绘
-    function revealPath(nodeIds: string[]) {
-      clearOverlay()
-      const overlay = overlayRef.current
-      const container = containerRef.current
-      if (!overlay || !container) return
-
-      // 同步 overlay 尺寸
-      overlay.width = container.clientWidth
-      overlay.height = container.clientHeight
-
-      console.log('[RevealPath] called, nodeIds:', nodeIds)
-      console.log('[RevealPath] overlay size:', overlay.width, 'x', overlay.height)
-
-      // 等 ECharts 渲染后捕获坐标，重试最多 4 次（每次间隔 200ms）
-      let attempts = 0
-      const tryStart = () => {
-        attempts++
-        if (chartRef.current) capturePositions(chartRef.current)
-
-        console.log(`[RevealPath] attempt ${attempts}, nodePositionsRef size:`, nodePositionsRef.current.size)
-        nodeIds.forEach(id => console.log(`  node "${id}":`, nodePositionsRef.current.get(id)))
-
-        const points = nodeIds
-          .map(id => nodePositionsRef.current.get(id))
-          .filter((p): p is { x: number; y: number } => !!p)
-
-        console.log(`[RevealPath] points found: ${points.length}/${nodeIds.length}`)
-
-        if (points.length < nodeIds.length && attempts < 4) {
-          setTimeout(tryStart, 200)
-          return
-        }
-        if (points.length < 2) {
-          console.warn('[RevealPath] Not enough points, giving up. Map keys:', [...nodePositionsRef.current.keys()])
-          return
-        }
-
-        console.log('[RevealPath] Starting animation with points:', points)
-        startAnimation(points)
-      }
-
-      const startAnimation = (points: { x: number; y: number }[]) => {
-        const segLengths = points.slice(1).map((p, i) =>
-          Math.hypot(p.x - points[i].x, p.y - points[i].y)
-        )
-        const totalLength = segLengths.reduce((a, b) => a + b, 0)
-        const DURATION = Math.max((nodeIds.length - 1) * 620, 900) // ms
-
-        const ctx = overlay!.getContext('2d')!
-        const startTime = performance.now()
-
-        function animate(now: number) {
-          const raw = Math.min((now - startTime) / DURATION, 1)
-          const t = raw < 0.5 ? 2 * raw * raw : 1 - Math.pow(-2 * raw + 2, 2) / 2
-          const drawLen = totalLength * t
-
-          ctx.clearRect(0, 0, overlay!.width, overlay!.height)
-
-          // ── 外发光阴影层
-          ctx.save()
-          ctx.lineCap = 'round'; ctx.lineJoin = 'round'
-          ctx.shadowBlur = 24; ctx.shadowColor = '#F72585'
-          ctx.strokeStyle = 'rgba(247,37,133,0.35)'; ctx.lineWidth = 10
-          _drawProgress(ctx, points, segLengths, drawLen)
-          ctx.stroke()
-          // ── 核心亮线
-          ctx.shadowBlur = 14; ctx.shadowColor = '#FF6EB4'
-          ctx.strokeStyle = '#F72585'; ctx.lineWidth = 2.5
-          _drawProgress(ctx, points, segLengths, drawLen)
-          ctx.stroke()
-          ctx.restore()
-
-          // ── 前进光点
-          if (raw < 0.98) {
-            const leader = getPointAlongPath(points, segLengths, totalLength, t)
-            ctx.save()
-            ctx.shadowBlur = 28; ctx.shadowColor = '#00E5FF'
-            ctx.fillStyle = '#00E5FF'
-            ctx.beginPath(); ctx.arc(leader.x, leader.y, 5, 0, Math.PI * 2); ctx.fill()
-            ctx.strokeStyle = 'rgba(0,229,255,0.4)'; ctx.lineWidth = 2
-            ctx.beginPath(); ctx.arc(leader.x, leader.y, 9 + 4 * Math.sin(now / 120), 0, Math.PI * 2); ctx.stroke()
-            ctx.restore()
-          }
-
-          if (raw < 1) {
-            animFrameRef.current = requestAnimationFrame(animate)
-          }
-          // 动画完成后线条保留在 overlay 上，直到用户重置或重新寻路
-        }
-        animFrameRef.current = requestAnimationFrame(animate)
-      }
-
-      setTimeout(tryStart, 150)
-    }
-
-    // 工具：按已绘长度描线路径（不调用 stroke）
-    function _drawProgress(
-      ctx: CanvasRenderingContext2D,
-      points: { x: number; y: number }[],
-      segLengths: number[],
-      drawLen: number
-    ) {
-      let acc = 0
-      ctx.beginPath()
-      ctx.moveTo(points[0].x, points[0].y)
-      for (let i = 0; i < segLengths.length; i++) {
-        if (acc + segLengths[i] <= drawLen) {
-          ctx.lineTo(points[i + 1].x, points[i + 1].y)
-          acc += segLengths[i]
-        } else {
-          const frac = (drawLen - acc) / segLengths[i]
-          ctx.lineTo(
-            points[i].x + (points[i + 1].x - points[i].x) * frac,
-            points[i].y + (points[i + 1].y - points[i].y) * frac
-          )
-          break
-        }
-      }
-    }
 
     // 初始化 ECharts（只跑一次）
     useEffect(() => {
@@ -395,16 +286,7 @@ const GraphCanvas = forwardRef<GraphCanvasRef, GraphCanvasProps>(
         }
       })
 
-      // 每次渲染后捕获节点坐标
-      chart.on('rendered', () => capturePositions(chart))
-
-      const handleResize = () => {
-        chart.resize()
-        if (overlayRef.current && containerRef.current) {
-          overlayRef.current.width = containerRef.current.clientWidth
-          overlayRef.current.height = containerRef.current.clientHeight
-        }
-      }
+      const handleResize = () => chart.resize()
       window.addEventListener('resize', handleResize)
 
       return () => {
@@ -420,30 +302,29 @@ const GraphCanvas = forwardRef<GraphCanvasRef, GraphCanvasProps>(
       chartRef.current.setOption(option, { notMerge: false })
     }, [data, highlight])
 
+    function resetLayout() {
+      if (!chartRef.current || !data) return
+      chartRef.current.setOption(buildEChartsOption(data, { mode: 'none' }), { notMerge: true })
+    }
+
     useImperativeHandle(ref, () => ({
       focusNode(nodeId: string) {
         chartRef.current?.dispatchAction({ type: 'focusNodeAdjacency', dataIndex: nodeId })
       },
-      resetLayout() {
-        clearOverlay()
-        if (!chartRef.current || !data) return
-        chartRef.current.setOption(buildEChartsOption(data, { mode: 'none' }), { notMerge: true })
-      },
-      revealPath,
-      clearOverlay,
+      resetLayout,
     }))
+
+    function handleZoomIn() {
+      chartRef.current?.dispatchAction({ type: 'zoom', zoom: 1.3, originX: 0.5, originY: 0.5 })
+    }
+    function handleZoomOut() {
+      chartRef.current?.dispatchAction({ type: 'zoom', zoom: 0.77, originX: 0.5, originY: 0.5 })
+    }
 
     return (
       <div className="w-full h-full relative" style={{ background: '#080B14' }}>
         <div ref={containerRef} className="w-full h-full" />
-        <canvas
-          ref={overlayRef}
-          style={{
-            position: 'absolute', top: 0, left: 0,
-            width: '100%', height: '100%',
-            pointerEvents: 'none',
-          }}
-        />
+        <ZoomControls onZoomIn={handleZoomIn} onZoomOut={handleZoomOut} onReset={resetLayout} />
       </div>
     )
   }

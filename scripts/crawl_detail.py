@@ -38,7 +38,7 @@ def get_celebrities(douban_id: str) -> list[dict] | None:
         data = resp.json()
         actors = data.get("actors", [])
         result = []
-        for actor in actors[:2]:  # 只取前2位主演
+        for actor in actors[:4]:  # 取前4位主演，覆盖更多明星
             cid = str(actor.get("id", ""))
             name = actor.get("name", "")
             avatar = (actor.get("avatar") or {}).get("normal", "")
@@ -48,7 +48,7 @@ def get_celebrities(douban_id: str) -> list[dict] | None:
                     "name": name,
                     "avatar_url": avatar,
                 })
-        return result if len(result) >= 2 else None
+        return result if len(result) >= 2 else None  # 至少2位主演才算有效
     except Exception as e:
         print(f"  [celebrities error] {douban_id}: {e}")
         return None

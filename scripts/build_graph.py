@@ -52,19 +52,21 @@ def main():
         cid for cid, d_list in star_dramas.items()
         if len(d_list) >= MIN_DRAMA_COUNT and cid not in exclude_ids
     }
-    print(f"[nodes] 明星 {len(active_stars)} 位")
+    print(f"[nodes] 明星（含孤立）{len(active_stars)} 位")
 
-    # ── 2. 构建边 ──
+    # ── 2. 构建边（只取前2位主演建边，聚焦男女主关系）──
     edge_dramas: dict[tuple[str, str], list[str]] = defaultdict(list)
     for drama in dramas:
-        cast = drama.get("cast", [])
+        cast = drama.get("cast", [])[:2]   # 只取前2位
         if len(cast) < 2:
             continue
-        a, b = cast[0]["celebrity_id"], cast[1]["celebrity_id"]
+        a = cast[0]["celebrity_id"]
+        b = cast[1]["celebrity_id"]
         if a not in active_stars or b not in active_stars or a == b:
             continue
         key = (min(a, b), max(a, b))
-        edge_dramas[key].append(drama["title"])
+        if drama["title"] not in edge_dramas[key]:
+            edge_dramas[key].append(drama["title"])
 
     print(f"[edges] 合作关系 {len(edge_dramas)} 条")
 
@@ -90,6 +92,15 @@ def main():
             node.update(node_patches[cid])
         nodes.append(node)
 
+    # 过滤掉完全孤立（无任何边）的节点
+    connected_stars = set()
+    for (a, b) in edge_dramas:
+        connected_stars.add(a)
+        connected_stars.add(b)
+    active_stars = active_stars & connected_stars
+    print(f"[nodes] 有效明星（有边连接）{len(active_stars)} 位")
+
+    nodes = [n for n in nodes if n["id"] in active_stars]
     nodes.sort(key=lambda n: n["weight"], reverse=True)
 
     # ── 4. 边 ──

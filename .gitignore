@@ -36,3 +36,6 @@ __pycache__/
 *.py[cod]
 scripts/.venv/
 scripts/*.egg-info/
+
+# 爬虫原始数据（体积大，本地生成，不提交）
+scripts/data/raw/

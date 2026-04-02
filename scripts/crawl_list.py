@@ -1,156 +1,149 @@
 """
 crawl_list.py
 爬取豆瓣近年高评分大陆剧列表
-策略：利用豆瓣 /rexxar/api/v2/subject/recent_hot/tv 接口（无需登录）
-      按 type=tv_domestic（国产剧）翻页，过滤年份和评分
+策略：使用豆瓣「选剧集→全部」页面的 recommend 接口
+      URL: /rexxar/api/v2/tv/recommend?tags=中国大陆,{year}&sort=T
+      无需登录，支持按年份+地区筛选，每年最多500条
 输出：data/raw/drama_ids.json
 """
 
-import asyncio
 import json
 import re
+import time
 import random
+import requests
+from datetime import datetime
 from pathlib import Path
-from playwright.async_api import async_playwright
 
 OUTPUT_DIR = Path(__file__).parent / "data" / "raw"
 OUTPUT_FILE = OUTPUT_DIR / "drama_ids.json"
 
-MIN_SCORE = 6.0
-YEARS = list(range(2021, 2027))
+MIN_SCORE = 6.0  # 同步写入 score_range 参数，服务端直接过滤
+_today = datetime.now()
+CURRENT_YEAR = _today.year
+# 近5年：从5年前的年份到今年（跨年份取整，确保完整覆盖）
+START_YEAR = (_today.replace(year=_today.year - 5)).year  # 5年前的自然年
+YEARS = list(range(START_YEAR, CURRENT_YEAR + 1))  # 动态滚动，永不写死
 PAGE_SIZE = 20
-MAX_PAGES = 30  # 最多爬 30 页 × 20 = 600 条
+BASE_URL = "https://m.douban.com/rexxar/api/v2/tv/recommend"
 
-BASE_API = (
-    "https://m.douban.com/rexxar/api/v2/subject/recent_hot/{type}"
-    "?start={start}&limit={page_size}"
-)
-
-# 国产剧 + 综合两个 type 都爬，确保覆盖全
-TYPES = ["tv_domestic", "tv"]
-
-UA = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/124.0.0.0 Safari/537.36"
-)
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) "
+        "AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+    ),
+    "Referer": "https://movie.douban.com/tv/",
+    "Accept": "application/json",
+}
 
 
-def parse_subtitle(subtitle: str) -> tuple[int | None, bool]:
-    """
-    解析 card_subtitle，如：'2024 / 中国大陆 / 剧情 爱情 / 导演 / 主演'
-    返回 (year, is_mainland)
-    """
-    year = None
-    m = re.search(r"(20\d{2})", subtitle)
-    if m:
-        year = int(m.group(1))
-    is_mainland = "中国大陆" in subtitle or "内地" in subtitle
-    return year, is_mainland
-
-
-async def crawl_type(page, tv_type: str) -> list[dict]:
+def crawl_year(session: requests.Session, year: int) -> list[dict]:
+    """爬取指定年份的所有中国大陆电视剧（按热度排序，最多500条）"""
     results = []
-    seen_ids = set()
+    seen = set()
+    start = 0
 
-    for p in range(MAX_PAGES):
-        start = p * PAGE_SIZE
-        url = BASE_API.format(type=tv_type, start=start, page_size=PAGE_SIZE)
+    while True:
+        # 直接拼接 URL，避免 requests 对中文参数二次编码导致 500
+        from urllib.parse import urlencode, quote
+        raw_params = (
+            f"refresh=0&start={start}&count={PAGE_SIZE}"
+            f"&selected_categories=%7B%22%E7%B1%BB%E5%9E%8B%22%3A%22%22%2C%22%E5%BD%A2%E5%BC%8F%22%3A%22%E7%94%B5%E8%A7%86%E5%89%A7%22%7D"
+            f"&uncollect=false"
+            f"&score_range={int(MIN_SCORE)}%2C10"
+            f"&tags={quote(f'中国大陆,电视剧,{year}')}"
+        )
+        url = f"{BASE_URL}?{raw_params}"
         try:
-            resp = await page.request.get(
-                url,
-                headers={
-                    "User-Agent": UA,
-                    "Referer": "https://movie.douban.com/",
-                    "Accept": "application/json",
-                },
-            )
-            if resp.status != 200:
-                print(f"  [warn] type={tv_type} page={p}: status {resp.status}")
+            resp = session.get(url, headers=HEADERS, timeout=15)
+            if resp.status_code != 200:
+                print(f"  [warn] year={year} start={start}: HTTP {resp.status_code}")
                 break
 
-            data = await resp.json()
+            data = resp.json()
             items = data.get("items", [])
+            total = data.get("total", 0)
             if not items:
-                print(f"  [done] type={tv_type} 第 {p} 页无数据，停止")
                 break
 
             added = 0
             for item in items:
                 sid = str(item.get("id", ""))
-                if not sid or sid in seen_ids:
+                if not sid or sid in seen:
                     continue
-                seen_ids.add(sid)
+                seen.add(sid)
 
                 subtitle = item.get("card_subtitle", "")
-                year, is_mainland = parse_subtitle(subtitle)
-                score = float((item.get("rating") or {}).get("value", 0) or 0)
-                title = item.get("title", "")
+                # 二次确认大陆剧
+                if "中国大陆" not in subtitle and "内地" not in subtitle:
+                    continue
 
-                # 过滤条件
-                if not is_mainland:
+                score = float((item.get("rating") or {}).get("value", 0) or 0)
+                # score_range 已在服务端过滤，本地只做兜底（防止接口漏网）
+                if score < MIN_SCORE:
                     continue
-                if year and year not in YEARS:
-                    continue
-                # score 可能为 0（评分人数不足），先收下，detail 阶段再过滤
-                if score > 0 and score < MIN_SCORE:
-                    continue
+
+                m = re.search(r"(20\d{2})", subtitle)
+                actual_year = int(m.group(1)) if m else year
 
                 results.append({
                     "douban_id": sid,
-                    "title": title,
-                    "year": year or 0,
+                    "title": item.get("title", ""),
+                    "year": actual_year,
                     "score": score,
                     "cover": (item.get("pic") or {}).get("normal", ""),
                 })
                 added += 1
 
-            print(f"  [type={tv_type}] page={p}: +{added} 条符合，累计 {len(results)}")
-            await asyncio.sleep(random.uniform(1.0, 2.5))
+            print(f"  {year} start={start}/{total}: +{added} 条，累计 {len(results)}")
+            start += PAGE_SIZE
+            time.sleep(random.uniform(0.6, 1.2))
+
+            if start >= total:
+                break
 
         except Exception as e:
-            print(f"  [error] type={tv_type} page={p}: {e}")
+            print(f"  [error] year={year} start={start}: {e}")
             break
 
     return results
 
 
-async def main():
+def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # 加载已有数据（增量）
     existing: dict[str, dict] = {}
     if OUTPUT_FILE.exists():
         with open(OUTPUT_FILE, encoding="utf-8") as f:
-            data = json.load(f)
-            existing = {d["douban_id"]: d for d in data}
+            existing = {d["douban_id"]: d for d in json.load(f)}
         print(f"[resume] 已有 {len(existing)} 条记录")
 
     all_results: dict[str, dict] = dict(existing)
 
-    async with async_playwright() as pw:
-        browser = await pw.chromium.launch(headless=True)
-        ctx = await browser.new_context(user_agent=UA, locale="zh-CN")
-        # 先访问一次豆瓣主页，获得基础 Cookie
-        page = await ctx.new_page()
-        await page.goto("https://movie.douban.com/tv/", wait_until="domcontentloaded", timeout=30000)
-        await asyncio.sleep(2)
+    session = requests.Session()
+    try:
+        session.get("https://www.douban.com/", headers=HEADERS, timeout=10)
+    except Exception:
+        pass
 
-        for tv_type in TYPES:
-            print(f"\n[crawl] type={tv_type}")
-            items = await crawl_type(page, tv_type)
-            for item in items:
-                if item["douban_id"] not in all_results:
-                    all_results[item["douban_id"]] = item
+    for year in YEARS:
+        print(f"\n[爬取 {year} 年国产剧]")
+        items = crawl_year(session, year)
+        new = sum(1 for it in items if it["douban_id"] not in all_results)
+        for it in items:
+            all_results.setdefault(it["douban_id"], it)
+        print(f"  → {year}年 新增 {new} 部，总计 {len(all_results)} 部")
 
-        await browser.close()
-
-    # 最终过滤 & 排序
+    # 过滤掉窗口外的旧年份（近5年滚动，自动淘汰过期数据）
     filtered = [
         v for v in all_results.values()
-        if v["year"] in YEARS and (v["score"] == 0 or v["score"] >= MIN_SCORE)
+        if START_YEAR <= v.get("year", 0) <= CURRENT_YEAR
     ]
-    filtered.sort(key=lambda x: (-x["score"], -x["year"]))
+    filtered = sorted(filtered, key=lambda x: (-x["score"], -x["year"]))
+
+    dropped = len(all_results) - len(filtered)
+    if dropped:
+        print(f"[清理] 移除 {dropped} 部窗口外旧剧（{START_YEAR}年前）")
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(filtered, f, ensure_ascii=False, indent=2)
@@ -160,4 +153,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
